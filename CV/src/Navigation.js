@@ -9,6 +9,8 @@ import Formacao from './Screens/Formacao'
 import Experience from './Screens/Experience'
 import Conhecimentos from './Screens/Conhecimentos'
 
+import MenuDrawer from './Components/MenuDrawer'
+
 const Tab = createBottomTabNavigator();
 const Drawer = createDrawerNavigator();
 
@@ -29,7 +31,7 @@ export default class Navigation extends Component {
   render() {
     return (
       <NavigationContainer>
-        <Drawer.Navigator initialRouteName="Home">
+        <Drawer.Navigator initialRouteName="Home" drawerContent={props => <MenuDrawer {...props} />}>
           <Drawer.Screen name="Home" component={this.bottomTab} />
         </Drawer.Navigator>
       </NavigationContainer>
