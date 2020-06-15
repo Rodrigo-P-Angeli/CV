@@ -10,7 +10,7 @@ const Tab = createBottomTabNavigator();
 export default function Navigation() {
   return (
     <NavigationContainer>
-      <Tab.Navigator>
+      <Tab.Navigator tabBarLabel={{size = 30}}>
         <Tab.Screen name="Home" component={App} />
         <Tab.Screen name="Settings" component={App} />
       </Tab.Navigator>
