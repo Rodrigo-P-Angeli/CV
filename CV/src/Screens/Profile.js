@@ -13,7 +13,7 @@ export default class Profile extends Component {
                         <Image source={require('../assets/images/foto_perfil.jpg')} style={styles.image}/>
                         <Topicos topico={'Contato'}/>
                         <Text style={styles.content}>
-                            Telefone: +353 87 351 8144 // +55 27 99992 8105asdf
+                            Telefone: +353 87 351 8144 // +55 27 99992 8105
                         </Text>
                         <Text style={styles.content}>
                             E-mail: rodrigop.deangeli@gmail.com 

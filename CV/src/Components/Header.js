@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome'
 export default class Header extends Component {
     render() {
         return (
             <View style={styles.container}>
                 <TouchableOpacity onPress={() => this.props.navigation.openDrawer()}>
-                    <Text>Open Drawer</Text>
+                    <Icon name={"bars"} size={30} color="#900"/>
                 </TouchableOpacity>
                 <Text style={styles.title}>
                     Rodrigo Pissinate De Angeli
@@ -21,7 +22,6 @@ export default class Header extends Component {
 const styles = StyleSheet.create({
     container: {
         backgroundColor: '#91E5F6',
-        alignItems: 'center',
         padding: 10,
     },
     title: {
