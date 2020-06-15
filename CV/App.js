@@ -6,7 +6,7 @@
  * @flow strict-local
  */
 
-import React from 'react';
+import React, { Component } from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -26,7 +26,7 @@ import {
 
 import { NavigationContainer } from '@react-navigation/native';
 
-export default class App extends Comment {
+export default class App extends Component {
   render() {
     return (
       <NavigationContainer>
@@ -114,5 +114,3 @@ const styles = StyleSheet.create({
     textAlign: 'right',
   },
 });
-
-export default App;
