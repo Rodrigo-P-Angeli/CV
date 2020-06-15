@@ -24,8 +24,6 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-import { NavigationContainer } from '@react-navigation/native';
-
 export default class App extends Component {
   render() {
     return (
@@ -40,7 +38,7 @@ export default class App extends Component {
         )}
         <View style={styles.body}>
           <View style={styles.sectionContainer}>
-            <Text style={styles.sectionTitle}>Step One</Text>
+            <Text style={styles.sectionTitle}>Step One {this.props.teb}</Text>
             <Text style={styles.sectionDescription}>
               Edit <Text style={styles.highlight}>App.js</Text> to change this
                 screen and then come back to see your edits.
