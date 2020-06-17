@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, ScrollView, Image } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity } from 'react-native';
 import Header from '../Components/Header'
 import Topicos from '../Components/Topicos'
 import Icon from 'react-native-vector-icons/FontAwesome'
@@ -15,7 +15,7 @@ export default class Profile extends Component {
                         <Image source={require('../assets/images/foto_perfil.jpg')} style={styles.image} />
                         <Topicos topico={'Contato'} />
                         <View style={styles.itens}>
-                            <Icon name={'phone'} size={15}/>
+                            <Icon name={'phone'} size={15} />
                             <Text style={styles.content}>+353 87 351 8144 // +55 27 99992 8105</Text>
                         </View>
                         <View style={styles.itens}>
@@ -24,15 +24,11 @@ export default class Profile extends Component {
                         </View>
                         <Topicos topico={'Endereço'} />
                         <Text style={styles.content}>
-                            Rua: Laurentino Proença Filho, n° 247
-                        </Text>
-                        <Text style={styles.content}>
-                            Jardim da penha, Vitória - ES
+                            {'Rua: Laurentino Proença Filho, n° 247\nJardim da penha, Vitória - ES'}
                         </Text>
                         <Topicos topico={'Um pouco sobre mim'} />
                         <Text style={styles.content}>
-                            Altêntico, criativo, divertido. Muito focado em aprender.
-                            Meus hobies são: surfar, tocar violão, assistir filmes, até mesmo jogar video games.
+                            {'Altêntico, criativo, divertido. Muito focado em aprender.\nMeus hobies são: surfar, tocar violão, assistir filmes, até mesmo jogar video games.'}
                         </Text>
                     </View>
                 </ScrollView>

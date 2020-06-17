@@ -3,6 +3,9 @@ import { View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Fontisto from 'react-native-vector-icons/Fontisto'
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 
 import Profile from './Screens/Profile'
 import Formacao from './Screens/Formacao'
@@ -23,10 +26,41 @@ export default class Navigation extends Component {
   bottomTab() {
     return (
       <Tab.Navigator initialRouteName="Perfil">
-        <Tab.Screen name="Perfil" component={Profile} />
-        <Tab.Screen name="Formação Acadêmica" component={Formacao} />
-        <Tab.Screen name="Experiêcias" component={Experience} />
-        <Tab.Screen name="Conhecimentos" component={Conhecimentos} />
+        <Tab.Screen
+          name="Perfil"
+          component={Profile} options={{
+            tabBarLabel: 'Perfil',
+            tabBarIcon: ({ color, size }) => (
+              <Fontisto name="person" color={color} size={size} />
+            ),
+          }} />
+        <Tab.Screen
+          name="Formação Acadêmica"
+          component={Formacao}
+          options={{
+            tabBarLabel: 'Formação Acadêmica',
+            tabBarIcon: ({ color, size }) => (
+              <FontAwesome5 name="book-reader" color={color} size={size} />
+            ),
+          }} />
+        <Tab.Screen
+          name="Experiêcias"
+          component={Experience}
+          options={{
+            tabBarLabel: 'Experiêcias',
+            tabBarIcon: ({ color, size }) => (
+              <MaterialIcons name="work" color={color} size={size} />
+            ),
+          }} />
+        <Tab.Screen
+          name="Conhecimentos"
+          component={Conhecimentos}
+          options={{
+            tabBarLabel: 'Conhecimentos',
+            tabBarIcon: ({ color, size }) => (
+              <MaterialIcons name="all-inclusive" color={color} size={size} />
+            ),
+          }} />
       </Tab.Navigator>
     )
   }

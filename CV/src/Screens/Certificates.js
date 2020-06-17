@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, ScrollView, Image, Dimensions } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Image } from 'react-native';
 import Header from '../Components/Header'
 import Topicos from '../Components/Topicos'
 import ImageZoom from 'react-native-image-pan-zoom';

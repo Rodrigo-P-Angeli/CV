@@ -3,7 +3,6 @@ import { View, Text, Image, StyleSheet } from 'react-native'
 import {
     DrawerContentScrollView,
     DrawerItemList,
-    DrawerView,
 } from '@react-navigation/drawer'
 
 import Icon from 'react-native-vector-icons/FontAwesome'
