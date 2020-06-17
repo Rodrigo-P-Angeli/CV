@@ -11,6 +11,8 @@ import Conhecimentos from './Screens/Conhecimentos'
 
 import MenuDrawer from './Components/MenuDrawer'
 
+import Certificates from './Screens/Certificates'
+
 const Tab = createBottomTabNavigator();
 const Drawer = createDrawerNavigator();
 
@@ -31,8 +33,9 @@ export default class Navigation extends Component {
   render() {
     return (
       <NavigationContainer>
-        <Drawer.Navigator initialRouteName="Home" drawerContent={props => <MenuDrawer {...props} />}>
-          <Drawer.Screen name="Home" component={this.bottomTab} />
+        <Drawer.Navigator initialRouteName="CV" drawerContent={props => <MenuDrawer {...props} />}>
+          <Drawer.Screen name="CV" component={this.bottomTab} />
+          <Drawer.Screen name="Certificados" component={Certificates} />
         </Drawer.Navigator>
       </NavigationContainer>
     )
