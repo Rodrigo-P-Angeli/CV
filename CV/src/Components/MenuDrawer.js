@@ -6,10 +6,14 @@ import {
     DrawerView,
 } from '@react-navigation/drawer'
 
+import Icon from 'react-native-vector-icons/FontAwesome'
+
 export default function (props) {
     return (
         <View style={{flex:1}}>
-            <Text>sfads</Text>
+            <Icon></Icon>
+            <Text>CV Rodrigo Pissinate</Text>
+            <Text></Text>
             <DrawerContentScrollView {...props}>
                 <DrawerItemList {...props} />
             </DrawerContentScrollView>
