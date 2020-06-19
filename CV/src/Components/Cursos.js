@@ -1,4 +1,33 @@
-import React from 'react'
-import { View, Text } from 'react-native'
+import React, { Component } from 'react'
+import { View, Text, StyleSheet, Image } from 'react-native'
 
 
+export default class Curso extends Component {
+    render() {
+        return (
+            <View style={styles.container}>
+                <Image style={styles.image} source={this.props.image} />
+                <Text style={styles.curso}>{this.props.curso}</Text>
+            </View>
+        )
+    }
+}
+
+const styles = StyleSheet.create({
+    container: {
+        padding: 10,
+        flexDirection: 'row',
+        alignItems: 'center',
+        paddingLeft: 40,
+        flex: 1
+    },
+    image: {
+        width: 50,
+        height: 50,
+        resizeMode: 'contain',
+    },
+    curso: {
+        fontFamily: 'Solway-Light',
+        fontSize: 20,
+    }
+})

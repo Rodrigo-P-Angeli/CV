@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, ScrollView, ImageBackground, FlatList } from 'r
 import Header from '../Components/Header'
 import Topicos from '../Components/Topicos';
 import Axios from 'axios';
+import Cursos from '../Components/Cursos'
 
 export default class Conhecimentos extends Component {
     state = {
@@ -10,6 +11,16 @@ export default class Conhecimentos extends Component {
             {
                 logo: require('../assets/images/react-icon.png'),
                 id: 1,
+                name: 'Curso'
+            },
+            {
+                logo: require('../assets/images/react-icon.png'),
+                id: 2,
+                name: 'Curso'
+            },
+            {
+                logo: require('../assets/images/react-icon.png'),
+                id: 3,
                 name: 'Curso'
             },
         ]
@@ -31,7 +42,8 @@ export default class Conhecimentos extends Component {
                         <FlatList
                             data={this.state.cursos}
                             keyExtractor={item => `${item.id}`}
-                            renderItem={({ item }) => <Text>{item.name}</Text>} />
+                            renderItem={({ item }) => <Cursos image={item.logo} curso={item.name} />}
+                            numColumns={2} />
                     </ScrollView>
                 </ImageBackground>
             </View>
