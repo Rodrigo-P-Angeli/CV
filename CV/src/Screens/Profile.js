@@ -47,6 +47,7 @@ const styles = StyleSheet.create({
     content: {
         paddingLeft: 10,
         fontSize: 15,
+        fontFamily: 'Solway-Light'
     },
     image: {
         alignSelf: 'center',

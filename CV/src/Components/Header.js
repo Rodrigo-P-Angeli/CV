@@ -30,7 +30,8 @@ const styles = StyleSheet.create({
         fontSize: 30,
         fontWeight: 'bold',
         color: 'black',
-        textAlign: 'center'
+        textAlign: 'center',
+        //fontFamily: 'Solway-Light' //Solway-Light
     },
     subtitle: {
         color: 'black',
