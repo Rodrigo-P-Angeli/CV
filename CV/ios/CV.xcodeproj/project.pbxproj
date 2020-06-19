@@ -32,6 +32,9 @@
 		11531B4519D9468A86126CC9 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B90681937A464F96B136A7ED /* Octicons.ttf */; };
 		75BCD42D97504DD892483769 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAC8A123CB4443AEAA540B94 /* SimpleLineIcons.ttf */; };
 		ABEEF0517E4444D89D06FF7E /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 326A3958423E4A1A81175591 /* Zocial.ttf */; };
+		27BD7B7114B547BA8C8EBCE0 /* Airstream.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0688266957EA412BB6632095 /* Airstream.ttf */; };
+		EEC983CD5DDB4B97A3FC1BE8 /* shelter.otf in Resources */ = {isa = PBXBuildFile; fileRef = 57437F3E5CDC4FBDB1E13E8E /* shelter.otf */; };
+		DB6CF316E2BE45138A53AB79 /* GreatVibes-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 33D17E348ECF4DB484008466 /* GreatVibes-Regular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +86,9 @@
 		B90681937A464F96B136A7ED /* Octicons.ttf */ = {isa = PBXFileReference; name = "Octicons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		CAC8A123CB4443AEAA540B94 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; name = "SimpleLineIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		326A3958423E4A1A81175591 /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0688266957EA412BB6632095 /* Airstream.ttf */ = {isa = PBXFileReference; name = "Airstream.ttf"; path = "../src/assets/Fonts/Airstream.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		57437F3E5CDC4FBDB1E13E8E /* shelter.otf */ = {isa = PBXFileReference; name = "shelter.otf"; path = "../src/assets/Fonts/shelter.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		33D17E348ECF4DB484008466 /* GreatVibes-Regular.otf */ = {isa = PBXFileReference; name = "GreatVibes-Regular.otf"; path = "../src/assets/Fonts/GreatVibes-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +215,9 @@
 				B90681937A464F96B136A7ED /* Octicons.ttf */,
 				CAC8A123CB4443AEAA540B94 /* SimpleLineIcons.ttf */,
 				326A3958423E4A1A81175591 /* Zocial.ttf */,
+				0688266957EA412BB6632095 /* Airstream.ttf */,
+				57437F3E5CDC4FBDB1E13E8E /* shelter.otf */,
+				33D17E348ECF4DB484008466 /* GreatVibes-Regular.otf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -368,6 +377,9 @@
 				11531B4519D9468A86126CC9 /* Octicons.ttf in Resources */,
 				75BCD42D97504DD892483769 /* SimpleLineIcons.ttf in Resources */,
 				ABEEF0517E4444D89D06FF7E /* Zocial.ttf in Resources */,
+				27BD7B7114B547BA8C8EBCE0 /* Airstream.ttf in Resources */,
+				EEC983CD5DDB4B97A3FC1BE8 /* shelter.otf in Resources */,
+				DB6CF316E2BE45138A53AB79 /* GreatVibes-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

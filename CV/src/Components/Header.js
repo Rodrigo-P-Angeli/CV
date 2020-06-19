@@ -35,9 +35,9 @@ const styles = StyleSheet.create({
     subtitle: {
         color: 'black',
         textAlign: 'center',
-        fontSize: 25,
+        fontSize: 35,
         paddingTop: 10,
-        fontFamily: 'shelter'
+        fontFamily: 'GreatVibes-Regular'
     },
     iconBar: {
         flexDirection: 'row',
