@@ -33,12 +33,13 @@ const styles = StyleSheet.create({
         resizeMode: 'contain'
     },
     periodo: {
-        fontWeight: 'bold',
         fontSize: 20,
         paddingLeft: 10,
+        fontFamily: 'Solway-Medium'
     },
     curso: {
         fontSize: 20,
         paddingLeft: 10,
+        fontFamily: 'Solway-Light',
     }
 })

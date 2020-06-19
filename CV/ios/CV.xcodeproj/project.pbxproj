@@ -36,6 +36,9 @@
 		EEC983CD5DDB4B97A3FC1BE8 /* shelter.otf in Resources */ = {isa = PBXBuildFile; fileRef = 57437F3E5CDC4FBDB1E13E8E /* shelter.otf */; };
 		DB6CF316E2BE45138A53AB79 /* GreatVibes-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 33D17E348ECF4DB484008466 /* GreatVibes-Regular.otf */; };
 		90FFB84D36D34868A673C966 /* Solway-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = CAF92422A56F40C0B1E6290B /* Solway-Light.otf */; };
+		FAEDA66E4D9C43049E3951F3 /* Solway-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = EC3826D3DCAE418ABCA5E944 /* Solway-Bold.otf */; };
+		F7F62A55038A47818D32A462 /* Solway-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 925623DA5EBD44F4B4F3D9F5 /* Solway-ExtraBold.otf */; };
+		53D86DA610364417A45AFDFB /* Solway-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = BD728A73CC7D4748851A7F2D /* Solway-Medium.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +94,9 @@
 		57437F3E5CDC4FBDB1E13E8E /* shelter.otf */ = {isa = PBXFileReference; name = "shelter.otf"; path = "../src/assets/Fonts/shelter.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		33D17E348ECF4DB484008466 /* GreatVibes-Regular.otf */ = {isa = PBXFileReference; name = "GreatVibes-Regular.otf"; path = "../src/assets/Fonts/GreatVibes-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		CAF92422A56F40C0B1E6290B /* Solway-Light.otf */ = {isa = PBXFileReference; name = "Solway-Light.otf"; path = "../src/assets/Fonts/Solway-Light.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		EC3826D3DCAE418ABCA5E944 /* Solway-Bold.otf */ = {isa = PBXFileReference; name = "Solway-Bold.otf"; path = "../src/assets/Fonts/Solway-Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		925623DA5EBD44F4B4F3D9F5 /* Solway-ExtraBold.otf */ = {isa = PBXFileReference; name = "Solway-ExtraBold.otf"; path = "../src/assets/Fonts/Solway-ExtraBold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BD728A73CC7D4748851A7F2D /* Solway-Medium.otf */ = {isa = PBXFileReference; name = "Solway-Medium.otf"; path = "../src/assets/Fonts/Solway-Medium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +227,9 @@
 				57437F3E5CDC4FBDB1E13E8E /* shelter.otf */,
 				33D17E348ECF4DB484008466 /* GreatVibes-Regular.otf */,
 				CAF92422A56F40C0B1E6290B /* Solway-Light.otf */,
+				EC3826D3DCAE418ABCA5E944 /* Solway-Bold.otf */,
+				925623DA5EBD44F4B4F3D9F5 /* Solway-ExtraBold.otf */,
+				BD728A73CC7D4748851A7F2D /* Solway-Medium.otf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -384,6 +393,9 @@
 				EEC983CD5DDB4B97A3FC1BE8 /* shelter.otf in Resources */,
 				DB6CF316E2BE45138A53AB79 /* GreatVibes-Regular.otf in Resources */,
 				90FFB84D36D34868A673C966 /* Solway-Light.otf in Resources */,
+				FAEDA66E4D9C43049E3951F3 /* Solway-Bold.otf in Resources */,
+				F7F62A55038A47818D32A462 /* Solway-ExtraBold.otf in Resources */,
+				53D86DA610364417A45AFDFB /* Solway-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

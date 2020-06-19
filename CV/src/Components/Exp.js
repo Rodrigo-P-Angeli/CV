@@ -20,8 +20,14 @@ const styles = StyleSheet.create({
         padding: 10,
     },
     date: {
-        fontWeight: 'bold',
+        // fontWeight: 'bold',
         fontSize: 15,
-
+        fontFamily: 'Solway-Medium'
+    },
+    company: {
+        fontFamily: 'Solway-Light',
+    },
+    desc: {
+        fontFamily: 'Solway-Light',
     }
 })

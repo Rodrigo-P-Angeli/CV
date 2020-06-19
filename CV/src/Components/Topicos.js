@@ -12,11 +12,11 @@ const Topicos = props => {
 }
 const styles = StyleSheet.create({
     topicos: {
-        fontWeight: 'bold',
         fontSize: 20,
         borderBottomColor: 'black',
         borderBottomWidth: 1,
         paddingTop: 10,
+        fontFamily: 'Solway-Medium'
     },
 })
 

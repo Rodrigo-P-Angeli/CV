@@ -27,11 +27,11 @@ const styles = StyleSheet.create({
         padding: 10,
     },
     title: {
-        fontSize: 30,
-        fontWeight: 'bold',
+        fontSize: 25,
+        //fontWeight: 'bold',
         color: 'black',
         textAlign: 'center',
-        //fontFamily: 'Solway-Light' //Solway-Light
+        fontFamily: 'Solway-ExtraBold' //Solway-Light
     },
     subtitle: {
         color: 'black',
