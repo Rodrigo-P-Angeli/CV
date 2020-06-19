@@ -8,16 +8,10 @@ export default class Conhecimentos extends Component {
     state = {
         cursos: [
             {
-                logo: 'asl',
+                logo: require('../assets/images/react-icon.png'),
                 id: 1,
                 name: 'Curso'
             },
-            {
-                logo: 'asl',
-                id: 2,
-                name: 'Curso'
-            },
-            
         ]
     }
     // componentDidMount(){
@@ -63,5 +57,6 @@ const styles = StyleSheet.create({
     },
     linguas: {
         padding: 7.5,
+        fontFamily: 'Solway-Light'
     },
 })
