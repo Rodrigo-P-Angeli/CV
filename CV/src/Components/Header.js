@@ -7,7 +7,7 @@ export default class Header extends Component {
             <View style={styles.container}>
                 <View style={styles.iconBar}>
                     <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} >
-                        <Icon name={"bars"} size={30} color="#900" />
+                        <Icon name={"bars"} size={30} color="white" />
                     </TouchableOpacity>
                 </View>
                 <Text style={styles.title}>
