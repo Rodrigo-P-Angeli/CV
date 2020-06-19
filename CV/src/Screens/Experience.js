@@ -18,6 +18,9 @@ export default class Experience extends Component {
             },
             {
                 id: 2,
+                cargo: 'Atividade extracurrícular',
+                company: 'Pesquisa: Fluidos não Newtonianos - Tixotrópicos',
+                desc: 'dasfa'
             },
         ]
     }
