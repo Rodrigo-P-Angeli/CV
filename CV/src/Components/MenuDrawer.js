@@ -15,7 +15,7 @@ export default function (props) {
                 <Text style={styles.title}>CV Rodrigo Pissinate</Text>
                 <View style={styles.content}>
                     <Image style={styles.image} source={require('../assets/images/foto_perfil.jpg')} />
-                    <View>
+                    <View style={{flex:1}}>
                         <View style={styles.itens}>
                             <Email name={'email'} size={15} />
                             <Text style={styles.contato}>rodrigop.deangeli@gmail.com</Text>
@@ -44,15 +44,17 @@ const styles = StyleSheet.create({
         height: 50,
         borderRadius: 25,
         resizeMode: 'contain',
+        alignSelf: 'center'
     },
     title: {
         fontSize: 20,
-        fontWeight: 'bold',
         padding: 10,
+        fontFamily: 'Solway-Bold'
     },
     contato: {
         fontSize: 13,
         paddingLeft: 5,
+        fontFamily: 'Solway-Light'
     },
     container: {
         padding: 10,
@@ -67,5 +69,8 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         paddingLeft: 10,
+    },
+    drawerItems: {
+        fontFamily: 'shelter'
     }
 })

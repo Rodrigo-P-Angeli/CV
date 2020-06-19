@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -10,10 +11,9 @@ import Profile from './Screens/Profile'
 import Formacao from './Screens/Formacao'
 import Experience from './Screens/Experience'
 import Conhecimentos from './Screens/Conhecimentos'
-
 import MenuDrawer from './Components/MenuDrawer'
-
 import Certificates from './Screens/Certificates'
+
 
 const Tab = createBottomTabNavigator();
 const Drawer = createDrawerNavigator();
@@ -66,7 +66,7 @@ export default class Navigation extends Component {
   render() {
     return (
       <NavigationContainer>
-        <Drawer.Navigator initialRouteName="CV" drawerContent={props => <MenuDrawer {...props} />}>
+        <Drawer.Navigator initialRouteName="CV" drawerContent={props => <MenuDrawer {...props} />} style={styles.Drawer}>
           <Drawer.Screen name="CV" component={this.bottomTab} />
           <Drawer.Screen name="Certificados" component={Certificates} />
         </Drawer.Navigator>
@@ -74,3 +74,10 @@ export default class Navigation extends Component {
     )
   }
 }
+
+
+const styles = StyleSheet.create({
+  Drawer: {
+    fontFamily: 'shelter'
+  }
+})
