@@ -13,15 +13,18 @@ export default class Formation extends Component {
             <View style={styles.container}>
                 <ImageBackground source={require('../assets/images/back-ground.jpg')} style={styles.backround}>
                     <Header {...this.props} />
-                    <ScrollView>
-                        <Escolaridade
-                            image={logoUfes}
-                            periodo={'mar/2013 - jul/2018'}
-                            curso={'Engenharia Mecânica'} />
-                        <Escolaridade
-                            image={logoIfes}
-                            periodo={'fev/2009 - dez/2012'}
-                            curso={'Técnico Mecânica integrado ao ensino médio'} />
+                    <ScrollView >
+                        <View style={{padding: 10}}>
+                            <Topicos topico={'Formação Acadêmica'} />
+                            <Escolaridade
+                                image={logoUfes}
+                                periodo={'mar/2013 - jul/2018'}
+                                curso={'Engenharia Mecânica'} />
+                            <Escolaridade
+                                image={logoIfes}
+                                periodo={'fev/2009 - dez/2012'}
+                                curso={'Técnico Mecânica integrado ao ensino médio'} />
+                        </View>
                     </ScrollView>
                 </ImageBackground>
             </View>
