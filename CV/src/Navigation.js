@@ -25,7 +25,7 @@ export default class Navigation extends Component {
   }
   bottomTab() {
     return (
-      <Tab.Navigator initialRouteName="Perfil">
+      <Tab.Navigator initialRouteName="Perfil" >
         <Tab.Screen
           name="Perfil"
           component={Profile} options={{

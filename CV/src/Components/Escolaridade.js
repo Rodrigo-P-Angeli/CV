@@ -9,7 +9,7 @@ export default class Escolaridade extends Component {
                 <ScrollView>
                     <View style={{ flexDirection: 'row' }}>
                         <Image source={this.props.image} style={styles.image} />
-                        <View style={{ justifyContent: 'space-around' }}>
+                        <View style={{ justifyContent: 'space-around', flex: 1 }}>
                             <Text style={styles.periodo}>{this.props.periodo.toUpperCase()}</Text>
                             <Text style={styles.curso}>{this.props.curso}</Text>
                         </View>
@@ -24,13 +24,13 @@ const styles = StyleSheet.create({
     container: {
         padding: 10,
         paddingTop: 30,
+        flex: 1,
     },
     image: {
-        // backgroundColor: 'white',
         alignSelf: 'center',
         width: 100,
         height: 100,
-        resizeMode: 'contain'
+        resizeMode: 'contain',
     },
     periodo: {
         fontSize: 20,
