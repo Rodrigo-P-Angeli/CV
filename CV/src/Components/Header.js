@@ -37,6 +37,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         fontSize: 25,
         paddingTop: 10,
+        fontFamily: 'shelter'
     },
     iconBar: {
         flexDirection: 'row',

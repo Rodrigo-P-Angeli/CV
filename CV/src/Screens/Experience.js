@@ -43,14 +43,14 @@ export default class Experience extends Component {
                     <FlatList
                         data={this.state.experencias}
                         keyExtractor={(item) => `${item.id}`}
-                        renderItem={({ item }) => <Exp key={item.id} {...item} />} />
+                        renderItem={({ item }) => <Exp {...item} />} />
                     <View style={styles.topico}>
                         <Topicos topico={'Outras experiências'} />
                     </View>
                     <FlatList
                         data={this.state.outrasExperencias}
                         keyExtractor={(item) => `${item.id}`}
-                        renderItem={({ item }) => <Exp key={item.id} {...item} />} />
+                        renderItem={({ item }) => <Exp {...item} />} />
                 </ScrollView>
             </View>
         )
