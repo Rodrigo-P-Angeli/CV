@@ -7,7 +7,7 @@ export default class Header extends Component {
             <View style={styles.container}>
                 <View style={styles.iconBar}>
                     <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} >
-                        <Icon name={"bars"} size={30} color="white" />
+                        <Icon name={"bars"} size={30} color="black" />
                     </TouchableOpacity>
                 </View>
                 <Text style={styles.title}>
@@ -23,7 +23,7 @@ export default class Header extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#91E5F6',
+        //backgroundColor: '#91E5F6',
         padding: 10,
     },
     title: {
