@@ -35,6 +35,7 @@
 		27BD7B7114B547BA8C8EBCE0 /* Airstream.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0688266957EA412BB6632095 /* Airstream.ttf */; };
 		EEC983CD5DDB4B97A3FC1BE8 /* shelter.otf in Resources */ = {isa = PBXBuildFile; fileRef = 57437F3E5CDC4FBDB1E13E8E /* shelter.otf */; };
 		DB6CF316E2BE45138A53AB79 /* GreatVibes-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 33D17E348ECF4DB484008466 /* GreatVibes-Regular.otf */; };
+		90FFB84D36D34868A673C966 /* Solway-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = CAF92422A56F40C0B1E6290B /* Solway-Light.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		0688266957EA412BB6632095 /* Airstream.ttf */ = {isa = PBXFileReference; name = "Airstream.ttf"; path = "../src/assets/Fonts/Airstream.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		57437F3E5CDC4FBDB1E13E8E /* shelter.otf */ = {isa = PBXFileReference; name = "shelter.otf"; path = "../src/assets/Fonts/shelter.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		33D17E348ECF4DB484008466 /* GreatVibes-Regular.otf */ = {isa = PBXFileReference; name = "GreatVibes-Regular.otf"; path = "../src/assets/Fonts/GreatVibes-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		CAF92422A56F40C0B1E6290B /* Solway-Light.otf */ = {isa = PBXFileReference; name = "Solway-Light.otf"; path = "../src/assets/Fonts/Solway-Light.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +220,7 @@
 				0688266957EA412BB6632095 /* Airstream.ttf */,
 				57437F3E5CDC4FBDB1E13E8E /* shelter.otf */,
 				33D17E348ECF4DB484008466 /* GreatVibes-Regular.otf */,
+				CAF92422A56F40C0B1E6290B /* Solway-Light.otf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				27BD7B7114B547BA8C8EBCE0 /* Airstream.ttf in Resources */,
 				EEC983CD5DDB4B97A3FC1BE8 /* shelter.otf in Resources */,
 				DB6CF316E2BE45138A53AB79 /* GreatVibes-Regular.otf in Resources */,
+				90FFB84D36D34868A673C966 /* Solway-Light.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
