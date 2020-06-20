@@ -69,9 +69,7 @@ export default class Navigation extends Component {
       <NavigationContainer>
         <Drawer.Navigator initialRouteName="CV"
           drawerContent={props => <MenuDrawer {...props} />}
-          drawerContentOptions={{
-            labelStyle: { fontFamily: 'Solway-Light' }
-          }}>
+          drawerContentOptions={drawerOptions}>
           <Drawer.Screen name="CV" component={this.bottomTab} />
           <Drawer.Screen name="Certificados" component={Certificates} />
         </Drawer.Navigator>
@@ -84,7 +82,7 @@ export default class Navigation extends Component {
 const tabBar = {
   activeTintColor: 'black',
   inactiveTintColor: '#94D8BD',
-  activeBackgroundColor: 'white',
+  
   labelStyle: {
     fontFamily: 'Solway-Light',
     fontSize: 10,
@@ -93,8 +91,11 @@ const tabBar = {
   },
 }
 
-const styles = StyleSheet.create({
-  Drawer: {
-    fontFamily: 'shelter'
+const drawerOptions = {
+  labelStyle: {
+    fontFamily: 'Solway-Light',
+    fontSize: 20,
   },
-})
+  activeTintColor: 'black',
+  inactiveTintColor: '#94D8BD',
+}
