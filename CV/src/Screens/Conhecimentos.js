@@ -19,7 +19,7 @@ export default class Conhecimentos extends Component {
             .then(res => this.setState({ cursos: res.data }))
             .catch(err => console.log(err))
     }
-    
+
     render() {
         return (
             <View style={styles.container}>
@@ -33,7 +33,7 @@ export default class Conhecimentos extends Component {
                         <Topicos topico={'Cursos'} />
                         <FlatList
                             data={this.state.cursos}
-                            keyExtractor={item => `${item.id}`}
+                            keyExtractor={() => `${Math.random()}`}
                             renderItem={({ item }) => <Cursos image={item.logo} curso={item.name} />}
                             numColumns={2} />
                     </ScrollView>
