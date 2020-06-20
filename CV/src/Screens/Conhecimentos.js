@@ -19,6 +19,7 @@ export default class Conhecimentos extends Component {
             .then(res => this.setState({ cursos: res.data }))
             .catch(err => console.log(err))
     }
+    
     render() {
         return (
             <View style={styles.container}>

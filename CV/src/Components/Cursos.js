@@ -6,7 +6,7 @@ export default class Curso extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Image style={styles.image} source={this.props.image} />
+                <Image style={styles.image} source={{ uri: this.props.image }} />
                 <Text style={styles.curso}>{this.props.curso}</Text>
             </View>
         )
