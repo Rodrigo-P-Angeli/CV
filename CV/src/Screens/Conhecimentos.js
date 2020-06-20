@@ -8,26 +8,17 @@ import Cursos from '../Components/Cursos'
 export default class Conhecimentos extends Component {
     state = {
         cursos: [
-            {
-                logo: require('../assets/images/react-icon.png'),
-                id: 1,
-                name: 'Curso'
-            },
-            {
-                logo: require('../assets/images/react-icon.png'),
-                id: 2,
-                name: 'Curso'
-            },
-            {
-                logo: require('../assets/images/react-icon.png'),
-                id: 3,
-                name: 'Curso'
-            },
         ]
     }
-    // componentDidMount(){
-    //     Axios.get('')
-    // }
+    componentDidMount() {
+        this.loadCursos()
+    }
+
+    async loadCursos() {
+        await Axios.get('https://lambe-e09e6.firebaseio.com/cursos.json')
+            .then(res => this.setState({ cursos: res.data }))
+            .catch(err => console.log(err))
+    }
     render() {
         return (
             <View style={styles.container}>
@@ -59,12 +50,11 @@ const styles = StyleSheet.create({
         padding: 10
     },
     content: {
-        paddingLeft: 10,
         paddingTop: 10,
     },
     backround: {
         flex: 1,
-        resizeMode: "cover",
+        resizeMode: "contain",
         justifyContent: "center",
     },
     linguas: {
