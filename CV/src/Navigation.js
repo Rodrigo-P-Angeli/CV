@@ -24,7 +24,7 @@ export default class Navigation extends Component {
   }
   bottomTab() {
     return (
-      <Tab.Navigator initialRouteName="Perfil">
+      <Tab.Navigator initialRouteName="Perfil" tabBarOptions={tabBar}>
         <Tab.Screen
           name="Perfil"
           component={Profile} options={{
@@ -37,7 +37,7 @@ export default class Navigation extends Component {
           name="Formação Acadêmica"
           component={Formacao}
           options={{
-            tabBarLabel: 'Formação Acadêmica',
+            tabBarLabel: 'Formação',
             tabBarIcon: ({ color, size }) => (
               <FontAwesome5 name="book-reader" color={color} size={size} />
             ),
@@ -59,6 +59,7 @@ export default class Navigation extends Component {
             tabBarIcon: ({ color, size }) => (
               <MaterialIcons name="all-inclusive" color={color} size={size} />
             ),
+
           }} />
       </Tab.Navigator>
     )
@@ -66,7 +67,11 @@ export default class Navigation extends Component {
   render() {
     return (
       <NavigationContainer>
-        <Drawer.Navigator initialRouteName="CV" drawerContent={props => <MenuDrawer {...props} />} style={styles.Drawer}>
+        <Drawer.Navigator initialRouteName="CV"
+          drawerContent={props => <MenuDrawer {...props} />}
+          drawerContentOptions={{
+            labelStyle: { fontFamily: 'Solway-Light' }
+          }}>
           <Drawer.Screen name="CV" component={this.bottomTab} />
           <Drawer.Screen name="Certificados" component={Certificates} />
         </Drawer.Navigator>
@@ -76,8 +81,20 @@ export default class Navigation extends Component {
 }
 
 
+const tabBar = {
+  activeTintColor: 'black',
+  inactiveTintColor: '#94D8BD',
+  activeBackgroundColor: 'white',
+  labelStyle: {
+    fontFamily: 'Solway-Light',
+    fontSize: 10,
+  },
+  style: {
+  },
+}
+
 const styles = StyleSheet.create({
   Drawer: {
     fontFamily: 'shelter'
-  }
+  },
 })
