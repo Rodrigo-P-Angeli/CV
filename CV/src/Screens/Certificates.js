@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, ScrollView, Image, ImageBackground } from 'react-native';
+import { View, StyleSheet, ScrollView, Image, ImageBackground, FlatList } from 'react-native';
 import ImageZoom from 'react-native-image-pan-zoom';
 
 import Header from '../Components/Header'
@@ -8,6 +8,15 @@ import Topicos from '../Components/Topicos'
 
 
 export default class Conhecimentos extends Component {
+    state = {
+        certificador: [
+            {
+                name: 'Curso React-Native',
+                foto: require('../assets/images/Certificate_reactNative.jpg')
+            }
+        ]
+    }
+
     render() {
         return (
             <View style={styles.container}>
@@ -15,22 +24,21 @@ export default class Conhecimentos extends Component {
                     <Header {...this.props} subtitle={'Certificados'} />
                     <ScrollView>
                         <View style={{ alignItems: 'center', flex: 1 }}>
-                            <Topicos topico={'Curso React-Native'} />
-                            <ImageZoom
-                                cropWidth={400}//Dimensions.get('window').width}
-                                cropHeight={300}//Dimensions.get('window').height/4}
-                                imageWidth={400}
-                                imageHeight={300}>
-                                <Image source={require('../assets/images/Certificate_reactNative.jpg')} style={styles.image} />
-                            </ImageZoom>
-                            <Topicos topico={'Curso React-Native'} />
-                            <ImageZoom
-                                cropWidth={400}//Dimensions.get('window').width}
-                                cropHeight={300}//Dimensions.get('window').height/4}
-                                imageWidth={400}
-                                imageHeight={300}>
-                                <Image source={require('../assets/images/Certificate_reactNative.jpg')} style={styles.image} />
-                            </ImageZoom>
+                            <FlatList
+                                keyExtractor={() => `${Math.random()}`}
+                                renderItem={({ item }) => {
+                                    return (<View  style={{ alignItems: 'center', flex: 1 }}>
+                                        <Topicos topico={item.name} />
+                                        <ImageZoom
+                                            cropWidth={400}//Dimensions.get('window').width}
+                                            cropHeight={300}//Dimensions.get('window').height/4}
+                                            imageWidth={400}
+                                            imageHeight={300}>
+                                            <Image source={item.foto} style={styles.image} />
+                                        </ImageZoom>
+                                    </View>)
+                                }}
+                                data={this.state.certificador} />
                         </View>
                     </ScrollView>
                 </ImageBackground>
