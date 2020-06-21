@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, ScrollView, Image, ImageBackground, FlatList } from 'react-native';
+import { View, StyleSheet, ScrollView, Image, ImageBackground, FlatList, Alert } from 'react-native';
 import ImageZoom from 'react-native-image-pan-zoom';
+import Axios from 'axios'
 
 import Header from '../Components/Header'
 import Topicos from '../Components/Topicos'
@@ -9,12 +10,17 @@ import Topicos from '../Components/Topicos'
 
 export default class Conhecimentos extends Component {
     state = {
-        certificador: [
-            {
-                name: 'Curso React-Native',
-                foto: require('../assets/images/Certificate_reactNative.jpg')
-            }
-        ]
+        certificador: []
+    }
+
+    componentDidMount() {
+        this.loadCertificados()
+    }
+
+    loadCertificados() {
+        Axios.get('https://lambe-e09e6.firebaseio.com/certificados.json')
+            .then(res => this.setState({ certificador: res.data }))
+            .catch(err => Alert.alert('Ops', 'Erro com a conecção'))
     }
 
     render() {
@@ -27,14 +33,14 @@ export default class Conhecimentos extends Component {
                             <FlatList
                                 keyExtractor={() => `${Math.random()}`}
                                 renderItem={({ item }) => {
-                                    return (<View  style={{ alignItems: 'center', flex: 1 }}>
+                                    return (<View style={{ alignItems: 'center', flex: 1 }}>
                                         <Topicos topico={item.name} />
                                         <ImageZoom
                                             cropWidth={400}//Dimensions.get('window').width}
                                             cropHeight={300}//Dimensions.get('window').height/4}
                                             imageWidth={400}
                                             imageHeight={300}>
-                                            <Image source={item.foto} style={styles.image} />
+                                            <Image source={{ uri: item.foto }} style={styles.image} />
                                         </ImageZoom>
                                     </View>)
                                 }}
