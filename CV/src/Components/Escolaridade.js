@@ -6,15 +6,16 @@ export default class Escolaridade extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <ScrollView>
+                <View>
+                    <Text style={styles.periodo}>{this.props.periodo.toUpperCase()}</Text>
                     <View style={{ flexDirection: 'row' }}>
                         <Image source={this.props.image} style={styles.image} />
                         <View style={{ justifyContent: 'space-around', flex: 1 }}>
-                            <Text style={styles.periodo}>{this.props.periodo.toUpperCase()}</Text>
+                            <Text style={styles.escola}>{this.props.escola}</Text>
                             <Text style={styles.curso}>{this.props.curso}</Text>
                         </View>
                     </View>
-                </ScrollView>
+                </View>
             </View>
         )
     }
@@ -34,12 +35,17 @@ const styles = StyleSheet.create({
     },
     periodo: {
         fontSize: 20,
-        paddingLeft: 10,
-        fontFamily: 'Solway-Medium'
+        paddingBottom: 5,
+        fontFamily: 'Solway-Bold'
     },
     curso: {
         fontSize: 20,
         paddingLeft: 10,
         fontFamily: 'Solway-Light',
+    },
+    escola: {
+        paddingLeft: 10,
+        fontSize: 20,
+        fontFamily: 'Solway-Medium',
     }
 })

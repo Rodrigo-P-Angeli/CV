@@ -18,10 +18,12 @@ export default class Formation extends Component {
                             <Topicos topico={'Formação Acadêmica'} />
                             <Escolaridade
                                 image={logoUfes}
+                                escola={'Universidade Federal do Espírito Santo'}
                                 periodo={'mar/2013 - jul/2018'}
                                 curso={'Engenharia Mecânica'} />
                             <Escolaridade
                                 image={logoIfes}
+                                escola={'Instituto Federal do Espírito Santo'}
                                 periodo={'fev/2009 - dez/2012'}
                                 curso={'Técnico Mecânica integrado ao ensino médio'} />
                         </View>
