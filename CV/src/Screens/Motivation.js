@@ -10,7 +10,7 @@ export default class Conhecimentos extends Component {
             <View style={styles.container}>
                 <ImageBackground source={require('../assets/images/back-ground.jpg')} style={styles.backround}>
                     <Header {...this.props} subtitle={'Motivação'} />
-                    <ScrollView>
+                    <ScrollView style={{padding: 10}}>
                         <Topicos topico={'Motivação do trabalho'} />
                         <Text style={styles.content}>
                             {'\nDurante a pandemia, decidi começar a estudar React-Native para tentar realizar um'}
@@ -36,7 +36,7 @@ export default class Conhecimentos extends Component {
                             {'diretamente do servidor\n'}
                         </Text>
                         <TouchableOpacity style={styles.link} onPress={() => { Linking.openURL('https://github.com/Rodrigo-P-Angeli/') }}>
-                            <Text style={styles.textLink}>Link para meu GitHub{'\n'}</Text>
+                            <Text style={styles.textLink}>Link para meu GitHub{'\n\n'}</Text>
                         </TouchableOpacity>
                     </ScrollView>
                 </ImageBackground>
