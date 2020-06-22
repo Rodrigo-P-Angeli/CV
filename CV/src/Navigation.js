@@ -13,6 +13,7 @@ import Experience from './Screens/Experience'
 import Conhecimentos from './Screens/Conhecimentos'
 import MenuDrawer from './Components/MenuDrawer'
 import Certificates from './Screens/Certificates'
+import Motivation from './Screens/Motivation'
 
 
 const Tab = createBottomTabNavigator();
@@ -71,6 +72,7 @@ export default class Navigation extends Component {
           drawerContent={props => <MenuDrawer {...props} />}
           drawerContentOptions={drawerOptions}>
           <Drawer.Screen name="CV" component={this.bottomTab} />
+          <Drawer.Screen name="Introdução" component={Motivation} />
           <Drawer.Screen name="Certificados" component={Certificates} />
         </Drawer.Navigator>
       </NavigationContainer>
@@ -82,7 +84,7 @@ export default class Navigation extends Component {
 const tabBar = {
   activeTintColor: 'black',
   inactiveTintColor: '#94D8BD',
-  
+
   labelStyle: {
     fontFamily: 'Solway-Light',
     fontSize: 10,
