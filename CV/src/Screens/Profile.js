@@ -1,11 +1,43 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity, ImageBackground } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity, ImageBackground, Alert, PermissionsAndroid } from 'react-native';
+import Contacts from 'react-native-contacts';
+
 import Header from '../Components/Header'
 import Topicos from '../Components/Topicos'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import Email from 'react-native-vector-icons/MaterialCommunityIcons'
 
 export default class Profile extends Component {
+    async onAddContact() {
+        try {
+            const granted = await PermissionsAndroid.request(
+                PermissionsAndroid.PERMISSIONS.READ_CONTACTS,
+            );
+            if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+                let newPerson = {
+                    emailAddresses: [{
+                      label: "work",
+                      email: "rodrigop.deangeli@gmail.com",
+                    }],
+                    phoneNumbers: [{
+                        label: 'mobile',
+                        number: '+5527999928105',
+                      }],
+                    displayName: "Rodrigo Pissinate De Angeli"
+                  }
+                   
+                  Contacts.openContactForm(newPerson, (err, contact) => {
+                    if (err) throw err;
+                    // contact has been saved
+                  })
+            } else {
+                Alert.alert('Ops', 'Permissão negada');
+            }
+        } catch (err) {
+            Alert.alert('Ops', err);
+        }
+    }
+
     render() {
         return (
             <View style={styles.container}>
@@ -15,7 +47,7 @@ export default class Profile extends Component {
                         <View style={styles.body}>
                             <Image source={require('../assets/images/foto_perfil.jpg')} style={styles.image} />
                             <Topicos topico={'Contato'} />
-                            <View style={{ flexDirection: 'row' }}>
+                            <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                                 <View>
                                     <View style={styles.itens}>
                                         <Icon name={'phone'} size={15} />
@@ -27,7 +59,7 @@ export default class Profile extends Component {
                                     </View>
                                 </View>
                                 <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                                    <TouchableOpacity style={{ alignSelf: 'center', padding: 5, backgroundColor: '#94D8BD' }} onPress={() => { }}>
+                                    <TouchableOpacity style={{ alignSelf: 'center', padding: 5, backgroundColor: '#94D8BD' }} onPress={() => this.onAddContact()}>
                                         <Text style={{ alignSelf: 'center', fontFamily: 'Solway-Light' }}>{'Add to\nContacts'}</Text>
                                     </TouchableOpacity>
                                 </View>
@@ -54,6 +86,7 @@ export default class Profile extends Component {
         )
     }
 }
+
 
 const styles = StyleSheet.create({
     container: {
