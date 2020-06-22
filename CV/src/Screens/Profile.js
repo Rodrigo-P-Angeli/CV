@@ -27,9 +27,16 @@ export default class Profile extends Component {
                             <Text style={styles.content}>
                                 {'Rua: Laurentino Proença Filho, n° 247\nJardim da penha, Vitória - ES'}
                             </Text>
+                            <Topicos topico={'Objetivo'} />
+                            <Text style={styles.content}>
+                                {'Este projeto tem como objetivo trazer uma breve'}
+                                {' apresentação sobre mim e mostrar algumas funcionalidades e conhecimentos em React-Native '}
+                                {'que possuo.'}
+                            </Text>
                             <Topicos topico={'Um pouco sobre mim'} />
                             <Text style={styles.content}>
-                                {'Altêntico, criativo, divertido. Muito focado em aprender.\nMeus hobies são: surfar, tocar violão, assistir filmes, até mesmo jogar video games.'}
+                                {'Autêntico, criativo, divertido. Interesse em aprender.\nMeus hobies são: surfar, tocar violão, assistir filmes, etc.'}
+                                {'\n'}
                             </Text>
                         </View>
                     </ScrollView>

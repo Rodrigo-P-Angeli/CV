@@ -20,7 +20,7 @@ export default class Conhecimentos extends Component {
     loadCertificados() {
         Axios.get('https://lambe-e09e6.firebaseio.com/certificados.json')
             .then(res => this.setState({ certificador: res.data }))
-            .catch(err => Alert.alert('Ops', 'Erro com a conecção'))
+            .catch(err => Alert.alert('Erro!','Por favor, verifique sua conecção com a internet'))
     }
 
     render() {
