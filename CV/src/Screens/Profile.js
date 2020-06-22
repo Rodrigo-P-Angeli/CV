@@ -15,13 +15,22 @@ export default class Profile extends Component {
                         <View style={styles.body}>
                             <Image source={require('../assets/images/foto_perfil.jpg')} style={styles.image} />
                             <Topicos topico={'Contato'} />
-                            <View style={styles.itens}>
-                                <Icon name={'phone'} size={15} />
-                                <Text style={styles.content}>+353 87 351 8144 // +55 27 99992 8105</Text>
-                            </View>
-                            <View style={styles.itens}>
-                                <Email name={'email'} />
-                                <Text style={styles.content}>rodrigop.deangeli@gmail.com</Text>
+                            <View style={{ flexDirection: 'row' }}>
+                                <View>
+                                    <View style={styles.itens}>
+                                        <Icon name={'phone'} size={15} />
+                                        <Text style={styles.content}>+353 87 351 8144 // +55 27 99992 8105</Text>
+                                    </View>
+                                    <View style={styles.itens}>
+                                        <Email name={'email'} />
+                                        <Text style={styles.content}>rodrigop.deangeli@gmail.com</Text>
+                                    </View>
+                                </View>
+                                <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+                                    <TouchableOpacity style={{ alignSelf: 'center', padding: 5, backgroundColor: '#94D8BD' }} onPress={() => { }}>
+                                        <Text style={{ alignSelf: 'center', fontFamily: 'Solway-Light' }}>{'Add to\nContacts'}</Text>
+                                    </TouchableOpacity>
+                                </View>
                             </View>
                             <Topicos topico={'Endereço'} />
                             <Text style={styles.content}>
