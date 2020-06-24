@@ -28,7 +28,7 @@ export default class menuDrawer extends Component {
                 <View style={styles.container}>
                     <Text style={styles.title}>CV Rodrigo Pissinate</Text>
                     <View style={styles.content}>
-                        <Image style={styles.image} source={require('../assets/images/foto_perfil.jpg')} />
+                        <Image style={styles.image} source={{uri: this.state.fotoPerfil}} />
                         <View style={{ flex: 1, justifyContent: 'space-around' }}>
                             <View style={styles.itens}>
                                 <Email name={'email'} size={15} />
