@@ -15,7 +15,7 @@ export default class Profile extends Component {
             .then(res => this.setState(res.data))
             .catch(err => Alert.alert('Ops...', err))
     }
-    componentDidMount() { 
+    componentDidMount() {
         this.loadInfo()
     }
     async onAddContact() {
@@ -55,7 +55,7 @@ export default class Profile extends Component {
                     <Header {...this.props} />
                     <ScrollView>
                         <View style={styles.body}>
-                            <Image source={require('../assets/images/foto_perfil.jpg')} style={styles.image} />
+                            <Image source={{ uri: this.state.fotoPerfil }} style={styles.image} />
                             <Topicos topico={'Contato'} />
                             <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                                 <View>
