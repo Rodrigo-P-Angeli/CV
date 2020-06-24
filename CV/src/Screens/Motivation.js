@@ -52,10 +52,6 @@ const styles = StyleSheet.create({
     body: {
         padding: 10
     },
-    content: {
-        paddingLeft: 10,
-        paddingTop: 10,
-    },
     image: {
         resizeMode: 'contain',
         alignSelf: 'center',
@@ -68,9 +64,10 @@ const styles = StyleSheet.create({
         justifyContent: "center",
     },
     content: {
-        paddingLeft: 10,
         fontSize: 15,
-        fontFamily: 'Solway-Light'
+        fontFamily: 'Solway-Light',
+        textAlign: 'justify',
+        flex: 1
     },
     link: {
         flexDirection: 'row',
