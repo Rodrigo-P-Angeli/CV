@@ -47,5 +47,6 @@ const styles = StyleSheet.create({
         paddingLeft: 10,
         fontSize: 20,
         fontFamily: 'Solway-Medium',
+        textAlign: 'justify',
     }
 })
