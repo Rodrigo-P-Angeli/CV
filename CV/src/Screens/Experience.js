@@ -18,13 +18,15 @@ export default class Experience extends Component {
                 id: 1,
                 cargo: 'Atividade extracurrícular',
                 company: 'AVES - Aero Vitória Espírito Santo',
-                desc: 'dasfa'
+                desc: 'dasfadmfmdkm\n adfkaskdmfkmasdkfmadskmfakdsmfkamdskfmadaaaaaaaaaaarodrigo',
+                period: 'mar/2020 - jun/2020'
             },
             {
                 id: 2,
                 cargo: 'Atividade extracurrícular',
                 company: 'Pesquisa: Fluidos não Newtonianos - Tixotrópicos',
-                desc: 'dasfa'
+                desc: 'dasfaasdadmfma fad f as fd a dfas dfas df ads f adfad fa sf amf m fas d daf m ',
+                period: 'mar/2020 - jun/2020'
             },
         ]
     }
@@ -68,7 +70,7 @@ const styles = StyleSheet.create({
         flex: 1
     },
     topico: {
-        padding: 10,
+        padding: 5,
     },
     backround: {
         flex: 1,

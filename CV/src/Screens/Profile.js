@@ -6,8 +6,18 @@ import Header from '../Components/Header'
 import Topicos from '../Components/Topicos'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import Email from 'react-native-vector-icons/MaterialCommunityIcons'
+import axios from 'axios'
 
 export default class Profile extends Component {
+    state = {}
+    loadInfo() {
+        axios.get('https://lambe-e09e6.firebaseio.com/profile.json')
+            .then(res => this.setState(res.data))
+            .catch(err => Alert.alert('Ops...', err))
+    }
+    componentDidMount() { 
+        this.loadInfo()
+    }
     async onAddContact() {
         try {
             const granted = await PermissionsAndroid.request(
@@ -16,20 +26,20 @@ export default class Profile extends Component {
             if (granted === PermissionsAndroid.RESULTS.GRANTED) {
                 let newPerson = {
                     emailAddresses: [{
-                      label: "work",
-                      email: "rodrigop.deangeli@gmail.com",
+                        label: "work",
+                        email: this.state.email,
                     }],
                     phoneNumbers: [{
                         label: 'mobile',
-                        number: '+5527999928105',
-                      }],
+                        number: this.state.phone,
+                    }],
                     displayName: "Rodrigo Pissinate De Angeli"
-                  }
-                   
-                  Contacts.openContactForm(newPerson, (err, contact) => {
+                }
+
+                Contacts.openContactForm(newPerson, (err, contact) => {
                     if (err) throw err;
                     // contact has been saved
-                  })
+                })
             } else {
                 Alert.alert('Ops', 'Permissão negada');
             }
@@ -51,11 +61,11 @@ export default class Profile extends Component {
                                 <View>
                                     <View style={styles.itens}>
                                         <Icon name={'phone'} size={15} />
-                                        <Text style={styles.content}>+353 87 351 8144 // +55 27 99992 8105</Text>
+                                        <Text style={styles.content}>{this.state.phone}</Text>
                                     </View>
                                     <View style={styles.itens}>
                                         <Email name={'email'} />
-                                        <Text style={styles.content}>rodrigop.deangeli@gmail.com</Text>
+                                        <Text style={styles.content}>{this.state.email}</Text>
                                     </View>
                                 </View>
                                 <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
@@ -66,17 +76,15 @@ export default class Profile extends Component {
                             </View>
                             <Topicos topico={'Endereço'} />
                             <Text style={styles.content}>
-                                {'Rua: Laurentino Proença Filho, n° 247\nJardim da penha, Vitória - ES'}
+                                {this.state.adress}
                             </Text>
                             <Topicos topico={'Objetivo'} />
                             <Text style={styles.content}>
-                                {'Este projeto tem como objetivo trazer uma breve'}
-                                {' apresentação sobre mim e mostrar algumas funcionalidades e conhecimentos em React-Native '}
-                                {'que possuo.'}
+                                {this.state.objetivo}
                             </Text>
                             <Topicos topico={'Um pouco sobre mim'} />
                             <Text style={styles.content}>
-                                {'Autêntico, criativo, divertido. Interesse em aprender.\nMeus hobies são: surfar, tocar violão, assistir filmes, etc.'}
+                                {this.state.desc}
                                 {'\n'}
                             </Text>
                         </View>
@@ -102,6 +110,9 @@ const styles = StyleSheet.create({
     },
     image: {
         alignSelf: 'center',
+        height: 220,
+        width: 165,
+        resizeMode: 'contain',
     },
     itens: {
         paddingTop: 5,
