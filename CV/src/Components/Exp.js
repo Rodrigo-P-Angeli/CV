@@ -24,7 +24,6 @@ const styles = StyleSheet.create({
         // fontWeight: 'bold',
         fontSize: 15,
         fontFamily: 'Solway-Medium',
-        textAlign: 'justify',
     },
     company: {
         fontSize: 15,
@@ -35,5 +34,6 @@ const styles = StyleSheet.create({
         paddingTop: 5,
         fontFamily: 'Solway-Light',
         flex: 1,
+        textAlign: 'justify',
     }
 })

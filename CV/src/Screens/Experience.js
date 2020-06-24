@@ -18,15 +18,15 @@ export default class Experience extends Component {
                 id: 1,
                 cargo: 'Atividade extracurrícular',
                 company: 'AVES - Aero Vitória Espírito Santo',
-                desc: 'dasfadmfmdkm\n adfkaskdmfkmasdkfmadskmfakdsmfkamdskfmadaaaaaaaaaaarodrigo',
-                period: 'mar/2020 - jun/2020'
+                desc: 'Participação nas competições S.A.E Aerodesign a nível nacional, pela equipe Aero Vitória Espírito Santo (AVES) da Universidade Federal do Espírito Santo, projetando e construindo aeronaves rádio controladas que atendam aos requisitos da competição.',
+                period: 'mai/2014 - dez/2016'
             },
             {
                 id: 2,
                 cargo: 'Atividade extracurrícular',
                 company: 'Pesquisa: Fluidos não Newtonianos - Tixotrópicos',
-                desc: 'dasfaasdadmfma fad f as fd a dfas dfas df ads f adfad fa sf amf m fas d daf m ',
-                period: 'mar/2020 - jun/2020'
+                desc: 'Desenvolvimento de pesquisa em parceria da UFES com a UCL - Universidade Centro-Leste, visando análise de viscosidade de fluidos não newtonianos por meio de ondas ultrassônicas com validação dos resultados em um reômetro.',
+                period: '2015 - 2016'
             },
         ]
     }
