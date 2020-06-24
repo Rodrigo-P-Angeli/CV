@@ -23,7 +23,8 @@ const styles = StyleSheet.create({
     date: {
         // fontWeight: 'bold',
         fontSize: 15,
-        fontFamily: 'Solway-Medium'
+        fontFamily: 'Solway-Medium',
+        textAlign: 'justify',
     },
     company: {
         fontSize: 15,
