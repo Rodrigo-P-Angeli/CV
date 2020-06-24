@@ -105,8 +105,10 @@ const styles = StyleSheet.create({
     },
     content: {
         paddingLeft: 10,
+        paddingRight: 10,
         fontSize: 15,
-        fontFamily: 'Solway-Light'
+        fontFamily: 'Solway-Light',
+        textAlign: 'justify',
     },
     image: {
         alignSelf: 'center',
