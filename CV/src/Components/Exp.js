@@ -26,6 +26,7 @@ const styles = StyleSheet.create({
         fontFamily: 'Solway-Medium'
     },
     company: {
+        fontSize: 15,
         fontFamily: 'Solway-Light',
         flex: 1,
     },
