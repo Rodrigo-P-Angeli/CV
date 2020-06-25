@@ -25,7 +25,7 @@ export default class Navigation extends Component {
   }
   bottomTab() {
     return (
-      <Tab.Navigator initialRouteName="Perfil" tabBarOptions={tabBar}>
+      <Tab.Navigator initialRouteName="Perfil" tabBarOptions={tabBar} backBehavior={'initialRoute'}>
         <Tab.Screen
           name="Perfil"
           component={Profile} options={{
@@ -70,7 +70,8 @@ export default class Navigation extends Component {
       <NavigationContainer>
         <Drawer.Navigator initialRouteName="CV"
           drawerContent={props => <MenuDrawer {...props} />}
-          drawerContentOptions={drawerOptions}>
+          drawerContentOptions={drawerOptions}
+          backBehavior={"initialRoute"}>
           <Drawer.Screen name="CV" component={this.bottomTab} />
           <Drawer.Screen name="Introdução" component={Motivation} />
           <Drawer.Screen name="Certificados" component={Certificates} />
