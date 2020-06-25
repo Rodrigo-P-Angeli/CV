@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, StyleSheet, FlatList, Alert } from 'react-native'
+import { View, StyleSheet, FlatList, Alert, ScrollView } from 'react-native'
 import axios from 'axios'
 
 import Header from '../Components/Header'
@@ -25,11 +25,9 @@ export default class OtherJobs extends Component {
             <View style={styles.container}>
                 <ImageBackground source={require('../assets/images/back-ground.jpg')} style={styles.backround}>
                     <Header {...this.props} subtitle={'Outros trabalhos'} />
-                    <FlatList
-                        keyExtractor={Math.random()}
-                        data={this.state.trabalhos}
-                        renderItem={({ item }) => <Job {...item} />}
-                    />
+                    <ScrollView>
+                        {this.state.trabalhos.map(item => <Job {...item} key={Math.random()} />)}
+                    </ScrollView>
                 </ImageBackground>
             </View>
         )
