@@ -13,7 +13,7 @@ import Conhecimentos from './Screens/Conhecimentos'
 import MenuDrawer from './Components/MenuDrawer'
 import Certificates from './Screens/Certificates'
 import Motivation from './Screens/Motivation'
-
+import OtherJobs from './Screens/OtherJobs'
 
 const Tab = createBottomTabNavigator();
 const Drawer = createDrawerNavigator();
@@ -74,6 +74,7 @@ export default class Navigation extends Component {
           <Drawer.Screen name="CV" component={this.bottomTab} />
           <Drawer.Screen name="Introdução" component={Motivation} />
           <Drawer.Screen name="Certificados" component={Certificates} />
+          <Drawer.Screen name="Outros Trabalhos" component={OtherJobs} />
         </Drawer.Navigator>
       </NavigationContainer>
     )
