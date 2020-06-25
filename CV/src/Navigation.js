@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -60,7 +59,6 @@ export default class Navigation extends Component {
             tabBarIcon: ({ color, size }) => (
               <MaterialIcons name="all-inclusive" color={color} size={size} />
             ),
-
           }} />
       </Tab.Navigator>
     )
@@ -68,10 +66,11 @@ export default class Navigation extends Component {
   render() {
     return (
       <NavigationContainer>
-        <Drawer.Navigator initialRouteName="CV"
+        <Drawer.Navigator
+          initialRouteName='CV'
           drawerContent={props => <MenuDrawer {...props} />}
           drawerContentOptions={drawerOptions}
-          backBehavior={"initialRoute"}>
+          backBehavior={'initialRoute'}>
           <Drawer.Screen name="CV" component={this.bottomTab} />
           <Drawer.Screen name="Introdução" component={Motivation} />
           <Drawer.Screen name="Certificados" component={Certificates} />
