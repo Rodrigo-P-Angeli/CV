@@ -5,11 +5,17 @@ export default class Exp extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <View style={{ flexDirection: 'row', flex: 1 }}>
-                    <Text style={styles.date}>{this.props.period.toUpperCase()}: </Text>
+                <View style={{ flex: 1 }}>
+                    <Text style={styles.date}>{this.props.period.toUpperCase()}</Text>
                     <Text style={styles.company}>{this.props.company}</Text>
                 </View>
                 <Text style={styles.desc}>{this.props.cargo}: {this.props.desc}</Text>
+                {this.props.topicos ? this.props.topicos.map((item) =>
+                    <View key={Math.random()} style={{ flexDirection: 'row' }}>
+                        <Text style={{paddingTop: 5}}> • </Text>
+                        <Text style={styles.topicos}>{item}</Text>
+                    </View>
+                ) : null}
             </View>
         )
     }
@@ -23,14 +29,22 @@ const styles = StyleSheet.create({
     date: {
         // fontWeight: 'bold',
         fontSize: 15,
-        fontFamily: 'Solway-Medium',
+        fontFamily: 'Solway-Bold',
+        alignSelf: 'center'
     },
     company: {
+        paddingTop: 5,
         fontSize: 15,
-        fontFamily: 'Solway-Light',
+        fontFamily: 'Solway-Medium',
         flex: 1,
     },
     desc: {
+        paddingTop: 5,
+        fontFamily: 'Solway-Light',
+        flex: 1,
+        textAlign: 'justify',
+    },
+    topicos: {
         paddingTop: 5,
         fontFamily: 'Solway-Light',
         flex: 1,
