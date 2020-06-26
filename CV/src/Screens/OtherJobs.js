@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, StyleSheet, FlatList, Alert, ScrollView, ImageBackground } from 'react-native'
+import { View, StyleSheet, Alert, ScrollView, ImageBackground } from 'react-native'
 import axios from 'axios'
 
 import Header from '../Components/Header'

@@ -11,7 +11,7 @@ export default class Job extends Component {
                     {this.props.linkGit? <TouchableOpacity onPress={() => Linking.openURL(this.props.linkGit)}>
                         <FontAwesome name={'github'} size={30} />
                     </TouchableOpacity> : <FontAwesome name={'github'} size={30} color={'#999'}/>}
-                    {this.props.linkAndroid ? <TouchableOpacity onPress={() => Linking.openURL(this.props.linkAnroid)}>
+                    {this.props.linkAndroid ? <TouchableOpacity onPress={() => Linking.openURL(this.props.linkAndroid)}>
                         <FontAwesome name={'android'} size={30} />
                     </TouchableOpacity> : <FontAwesome name={'android'} size={30} color={'#999'} />}
                     {this.props.linkIos ? <TouchableOpacity onPress={() => Linking.openURL(this.props.linkIos)}>
