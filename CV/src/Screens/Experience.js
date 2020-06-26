@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, ScrollView, FlatList, Alert, ImageBackground, YellowBox } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Alert, ImageBackground } from 'react-native';
 import Header from '../Components/Header'
 import Exp from '../Components/Exp'
 
 import axios from 'axios'
 import Topicos from '../Components/Topicos'
-
-YellowBox.ignoreWarnings([
-  'VirtualizedLists should never be nested', // TODO: Remove when fixed
-])
 
 export default class Experience extends Component {
     state = {
@@ -36,7 +32,7 @@ export default class Experience extends Component {
     async loadExp() {
         await axios.get('https://lambe-e09e6.firebaseio.com/exp.json')
             .then(res => { this.setState({ experencias: res.data }) })
-            .catch(() => Alert.alert('Ops','Could not load, please verify your connection to internet'))
+            .catch(() => Alert.alert('Ops', 'Could not load, please verify your connection to internet'))
     }
     render() {
         return (
@@ -45,19 +41,13 @@ export default class Experience extends Component {
                     <Header {...this.props} />
                     <ScrollView>
                         <View style={styles.topico}>
-                            <Topicos topico={'Experiências na carteira'} />
+                            <Topicos topico={'Experiências comprovadas'} />
                         </View>
-                        <FlatList
-                            data={this.state.experencias}
-                            keyExtractor={(item) => `${item.id}`}
-                            renderItem={({ item }) => <Exp {...item} />} />
+                        {this.state.experencias.map(item => <Exp key={Math.random()} {...item}/>)}
                         <View style={styles.topico}>
                             <Topicos topico={'Outras experiências'} />
                         </View>
-                        <FlatList
-                            data={this.state.outrasExperencias}
-                            keyExtractor={(item) => `${item.id}`}
-                            renderItem={({ item }) => <Exp {...item} />} />
+                        {this.state.outrasExperencias.map(item => <Exp key={Math.random()} {...item}/>)}
                     </ScrollView>
                 </ImageBackground>
             </View>

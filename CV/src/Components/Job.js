@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Text, TouchableOpacity, Linking } from 'react-native';
 
 export default class Job extends Component {
     render() {
         return (
-            <View style={styles.container}>
-            </View>
+            <TouchableOpacity style={styles.container} onPress={() => Linking.openURL(this.props.link)}>
+                <Text style={styles.name}>{this.props.name}</Text>
+                <Text style={styles.link}>{this.props.link}</Text>
+            </TouchableOpacity>
         )
     }
 }
@@ -15,4 +17,14 @@ const styles = StyleSheet.create({
         padding: 10,
         flex: 1
     },
+    name: {
+        fontFamily: 'Solway-Bold',
+        fontSize: 20,
+        paddingBottom: 10,
+    },
+    link: {
+        fontFamily: 'Solway-Light',
+        fontSize: 15,
+        textAlign: 'justify'
+    }
 })
