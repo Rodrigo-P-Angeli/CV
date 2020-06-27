@@ -34,12 +34,12 @@ export default class Navigation extends Component {
             ),
           }} />
         <Tab.Screen
-          name="Formação Acadêmica"
-          component={Formacao}
+          name="Conhecimentos"
+          component={Conhecimentos}
           options={{
-            tabBarLabel: 'Formação',
+            tabBarLabel: 'Conhecimentos',
             tabBarIcon: ({ color, size }) => (
-              <FontAwesome5 name="book-reader" color={color} size={size} />
+              <MaterialIcons name="all-inclusive" color={color} size={size} />
             ),
           }} />
         <Tab.Screen
@@ -52,12 +52,12 @@ export default class Navigation extends Component {
             ),
           }} />
         <Tab.Screen
-          name="Conhecimentos"
-          component={Conhecimentos}
+          name="Formação Acadêmica"
+          component={Formacao}
           options={{
-            tabBarLabel: 'Conhecimentos',
+            tabBarLabel: 'Formação',
             tabBarIcon: ({ color, size }) => (
-              <MaterialIcons name="all-inclusive" color={color} size={size} />
+              <FontAwesome5 name="book-reader" color={color} size={size} />
             ),
           }} />
       </Tab.Navigator>
