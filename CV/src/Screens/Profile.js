@@ -1,12 +1,23 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity, ImageBackground, Alert, PermissionsAndroid } from 'react-native';
+import {
+    View,
+    Text,
+    StyleSheet,
+    ScrollView,
+    Image,
+    TouchableOpacity,
+    ImageBackground,
+    Alert,
+    PermissionsAndroid
+} from 'react-native';
+
 import Contacts from 'react-native-contacts';
+import axios from 'axios'
+import Icon from 'react-native-vector-icons/FontAwesome'
+import Email from 'react-native-vector-icons/MaterialCommunityIcons'
 
 import Header from '../Components/Header'
 import Topicos from '../Components/Topicos'
-import Icon from 'react-native-vector-icons/FontAwesome'
-import Email from 'react-native-vector-icons/MaterialCommunityIcons'
-import axios from 'axios'
 
 export default class Profile extends Component {
     state = {}
