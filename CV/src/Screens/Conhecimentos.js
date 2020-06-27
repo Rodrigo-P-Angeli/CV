@@ -12,10 +12,9 @@ YellowBox.ignoreWarnings([
 
 export default class Conhecimentos extends Component {
     state = {
-        cursos: [
-        ]
+        cursos: []
     }
-    
+
     componentDidMount() {
         this.loadCursos()
     }
