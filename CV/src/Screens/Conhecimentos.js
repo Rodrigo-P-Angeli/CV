@@ -1,15 +1,21 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, ScrollView, ImageBackground, FlatList } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, ImageBackground, FlatList, YellowBox } from 'react-native';
 import Header from '../Components/Header'
 import Topicos from '../Components/Topicos';
 import Axios from 'axios';
 import Cursos from '../Components/Cursos'
+
+YellowBox.ignoreWarnings([
+    'VirtualizedLists should never be nested', // TODO: Remove when fixed
+])
+
 
 export default class Conhecimentos extends Component {
     state = {
         cursos: [
         ]
     }
+    
     componentDidMount() {
         this.loadCursos()
     }
