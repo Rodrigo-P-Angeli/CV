@@ -23,7 +23,7 @@ export default class Header extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#91E5F6',
+        //backgroundColor: '#91E5F6',
         padding: 10,
     },
     title: {
