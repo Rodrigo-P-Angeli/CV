@@ -16,7 +16,6 @@ const styles = StyleSheet.create({
         borderBottomColor: 'black',
         borderBottomWidth: 1,
         paddingTop: 10,
-        fontFamily: 'Solway-Medium'
     },
 })
 
