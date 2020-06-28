@@ -2,15 +2,13 @@ import React, { Component } from 'react';
 import {
     View,
     StyleSheet,
-    ScrollView,
     Image,
-    TouchableOpacity,
     ImageBackground,
     Alert,
     PermissionsAndroid
 } from 'react-native';
 
-import { Container, Body, Content, Text, Button } from 'native-base'
+import { Container, Content, Text, Button } from 'native-base'
 
 import Contacts from 'react-native-contacts';
 import axios from 'axios'
@@ -79,9 +77,9 @@ export default class Profile extends Component {
                                     <Text style={[styles.content, { paddingLeft: 5 }]}>{this.state.email}</Text>
                                 </View>
                             </View>
-                            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                                <Button light onPress={() => this.onAddContact()}>
-                                    <Text>Add Contact!</Text>
+                            <View style={{ flex: 1, alignItems: 'flex-end', justifyContent: 'flex-end' }}>
+                                <Button primary onPress={() => this.onAddContact()}>
+                                    <Text style={{textAlign: 'center'}}>{'Adicionar\nContato'}</Text>
                                 </Button>
                             </View>
                         </View>
