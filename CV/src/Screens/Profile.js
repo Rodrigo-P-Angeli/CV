@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {
     View,
-    Text,
     StyleSheet,
     ScrollView,
     Image,
@@ -11,7 +10,7 @@ import {
     PermissionsAndroid
 } from 'react-native';
 
-import { Container, Body, Content } from 'native-base'
+import { Container, Body, Content, Text } from 'native-base'
 
 import Contacts from 'react-native-contacts';
 import axios from 'axios'
@@ -82,7 +81,7 @@ export default class Profile extends Component {
                             </View>
                             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
                                 <TouchableOpacity style={{ alignSelf: 'center', padding: 5, backgroundColor: '#94D8BD' }} onPress={() => this.onAddContact()}>
-                                    <Text style={{ alignSelf: 'center', fontFamily: 'Solway-Light' }}>{'Add to\nContacts'}</Text>
+                                    <Text style={{ alignSelf: 'center' }}>{'Add to\nContacts'}</Text>
                                 </TouchableOpacity>
                             </View>
                         </View>
@@ -116,7 +115,6 @@ const styles = StyleSheet.create({
     },
     content: {
         fontSize: 15,
-        fontFamily: 'Solway-Light',
         textAlign: 'justify',
     },
     image: {
