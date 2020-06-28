@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, ScrollView, ImageBackground, FlatList, YellowBox } from 'react-native';
+//import { Header } from 'native-base'
 import Header from '../Components/Header'
 import Topicos from '../Components/Topicos'
 import Axios from 'axios'
@@ -30,7 +31,7 @@ export default class Conhecimentos extends Component {
             <View style={styles.container}>
                 <ImageBackground source={require('../assets/images/back-ground.jpg')} style={styles.backround}>
                     <Header {...this.props} />
-                    <ScrollView style={{ padding: 10 }}>
+                    <ScrollView style={styles.body}>
                         <Topicos topico={'Línguas'} />
                         <Text style={styles.linguas}>Português (Nativo)</Text>
                         <Text style={styles.linguas}>Inglês (Avançado)</Text>

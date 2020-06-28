@@ -11,6 +11,8 @@ import {
     PermissionsAndroid
 } from 'react-native';
 
+import { Container, Body, Content } from 'native-base'
+
 import Contacts from 'react-native-contacts';
 import axios from 'axios'
 import Icon from 'react-native-vector-icons/FontAwesome'
@@ -61,47 +63,45 @@ export default class Profile extends Component {
 
     render() {
         return (
-            <View style={styles.container}>
+            <Container>
                 <ImageBackground source={require('../assets/images/back-ground.jpg')} style={styles.backround}>
                     <Header {...this.props} />
-                    <ScrollView>
-                        <View style={styles.body}>
-                            <Image source={{ uri: this.state.fotoPerfil }} style={styles.image} />
-                            <Topicos topico={'Contato'} />
-                            <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                                <View>
-                                    <View style={styles.itens}>
-                                        <Icon name={'phone'} size={15} />
-                                        <Text style={styles.content}>{this.state.phone}</Text>
-                                    </View>
-                                    <View style={styles.itens}>
-                                        <Email name={'email'} />
-                                        <Text style={styles.content}>{this.state.email}</Text>
-                                    </View>
+                    <Content style={styles.body}>
+                        <Image source={{ uri: this.state.fotoPerfil }} style={styles.image} />
+                        <Topicos topico={'Contato'} />
+                        <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                            <View>
+                                <View style={styles.itens}>
+                                    <Icon name={'phone'} size={15} />
+                                    <Text style={styles.content}>{this.state.phone}</Text>
                                 </View>
-                                <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                                    <TouchableOpacity style={{ alignSelf: 'center', padding: 5, backgroundColor: '#94D8BD' }} onPress={() => this.onAddContact()}>
-                                        <Text style={{ alignSelf: 'center', fontFamily: 'Solway-Light' }}>{'Add to\nContacts'}</Text>
-                                    </TouchableOpacity>
+                                <View style={styles.itens}>
+                                    <Email name={'email'} />
+                                    <Text style={styles.content}>{this.state.email}</Text>
                                 </View>
                             </View>
-                            <Topicos topico={'Endereço'} />
-                            <Text style={styles.content}>
-                                {this.state.adress}
-                            </Text>
-                            <Topicos topico={'Objetivo'} />
-                            <Text style={styles.content}>
-                                {this.state.objetivo}
-                            </Text>
-                            <Topicos topico={'Um pouco sobre mim'} />
-                            <Text style={styles.content}>
-                                {this.state.desc}
-                                {'\n'}
-                            </Text>
+                            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+                                <TouchableOpacity style={{ alignSelf: 'center', padding: 5, backgroundColor: '#94D8BD' }} onPress={() => this.onAddContact()}>
+                                    <Text style={{ alignSelf: 'center', fontFamily: 'Solway-Light' }}>{'Add to\nContacts'}</Text>
+                                </TouchableOpacity>
+                            </View>
                         </View>
-                    </ScrollView>
+                        <Topicos topico={'Endereço'} />
+                        <Text style={styles.content}>
+                            {this.state.adress}
+                        </Text>
+                        <Topicos topico={'Objetivo'} />
+                        <Text style={styles.content}>
+                            {this.state.objetivo}
+                        </Text>
+                        <Topicos topico={'Um pouco sobre mim'} />
+                        <Text style={styles.content}>
+                            {this.state.desc}
+                            {'\n'}
+                        </Text>
+                    </Content >
                 </ImageBackground>
-            </View>
+            </Container >
         )
     }
 }
@@ -115,8 +115,6 @@ const styles = StyleSheet.create({
         padding: 10
     },
     content: {
-        paddingLeft: 10,
-        paddingRight: 10,
         fontSize: 15,
         fontFamily: 'Solway-Light',
         textAlign: 'justify',
