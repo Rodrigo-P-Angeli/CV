@@ -1,21 +1,22 @@
 import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import { View, StyleSheet } from 'react-native'
+import { Text, H3 } from 'native-base'
 
 const Topicos = props => {
     return (
         <View>
-            <Text style={styles.topicos}>
+            <H3 style={styles.topicos}>
                 {props.topico}
-            </Text>
+            </H3>
         </View>
     )
 }
 const styles = StyleSheet.create({
     topicos: {
-        fontSize: 20,
         borderBottomColor: 'black',
         borderBottomWidth: 1,
         paddingTop: 10,
+        fontFamily: ''
     },
 })
 

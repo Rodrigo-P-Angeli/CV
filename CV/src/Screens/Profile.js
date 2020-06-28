@@ -10,7 +10,7 @@ import {
     PermissionsAndroid
 } from 'react-native';
 
-import { Container, Body, Content, Text } from 'native-base'
+import { Container, Body, Content, Text, Button } from 'native-base'
 
 import Contacts from 'react-native-contacts';
 import axios from 'axios'
@@ -72,17 +72,17 @@ export default class Profile extends Component {
                             <View>
                                 <View style={styles.itens}>
                                     <Icon name={'phone'} size={15} />
-                                    <Text style={styles.content}>{this.state.phone}</Text>
+                                    <Text style={[styles.content, { paddingLeft: 5 }]}>{this.state.phone}</Text>
                                 </View>
                                 <View style={styles.itens}>
                                     <Email name={'email'} />
-                                    <Text style={styles.content}>{this.state.email}</Text>
+                                    <Text style={[styles.content, { paddingLeft: 5 }]}>{this.state.email}</Text>
                                 </View>
                             </View>
                             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                                <TouchableOpacity style={{ alignSelf: 'center', padding: 5, backgroundColor: '#94D8BD' }} onPress={() => this.onAddContact()}>
-                                    <Text style={{ alignSelf: 'center' }}>{'Add to\nContacts'}</Text>
-                                </TouchableOpacity>
+                                <Button light onPress={() => this.onAddContact()}>
+                                    <Text>Add Contact!</Text>
+                                </Button>
                             </View>
                         </View>
                         <Topicos topico={'Endereço'} />
@@ -132,6 +132,6 @@ const styles = StyleSheet.create({
         flex: 1,
         resizeMode: "cover",
         justifyContent: "center",
-    }
+    },
 })
 
