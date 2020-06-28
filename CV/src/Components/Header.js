@@ -14,10 +14,9 @@ export default class Headere extends Component {
                             <Icon name={"menu"} />
                         </Button>
                     </Left>
-                    <Body style={styles.subtitle}>
-                        <Title>{this.props.subtitle ? this.props.subtitle : 'Curriculum Vitae'}</Title>
+                    <Body>
+                        <Title style={styles.subtitle}>{this.props.subtitle ? this.props.subtitle : 'Curriculum Vitae'}</Title>
                     </Body>
-                    <Right />
                     {/* <View style={styles.iconBar}>
                         <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} >
                             
@@ -48,6 +47,7 @@ const styles = StyleSheet.create({
     },
     subtitle: {
         fontFamily: 'GreatVibes-Regular',
+        fontSize: 30,
     },
     iconBar: {
         flexDirection: 'row',
