@@ -15,7 +15,7 @@ export default class Headere extends Component {
                         </Button>
                     </Left>
                     <Body>
-                        <Title style={styles.subtitle}>{this.props.subtitle ? this.props.subtitle : 'Curriculum Vitae'}</Title>
+                        <Title style={styles.subtitle}>{this.props.subtitle ? this.props.subtitle : 'Curriculum Vitae '}</Title>
                     </Body>
                     {/* <View style={styles.iconBar}>
                         <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} >
