@@ -65,39 +65,59 @@ export default class Profile extends Component {
                 <ImageBackground source={require('../assets/images/back-ground.jpg')} style={styles.backround}>
                     <Header {...this.props} />
                     <ScrollView>
-                        <View style={styles.body}>
-                            <Image source={{ uri: this.state.fotoPerfil }} style={styles.image} />
-                            <Topicos topico={'Contato'} />
-                            <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                                <View>
-                                    <View style={styles.itens}>
-                                        <Icon name={'phone'} size={15} />
-                                        <Text style={[styles.content, { paddingLeft: 10 }]}>{this.state.phone}</Text>
-                                    </View>
-                                    <View style={styles.itens}>
-                                        <Email name={'email'} />
-                                        <Text style={[styles.content, { paddingLeft: 10 }]}>{this.state.email}</Text>
-                                    </View>
-                                </View>
-                                <View style={{ alignItems: 'flex-end', justifyContent: 'flex-end', alignSelf: 'flex-end', }}>
-                                    <TouchableOpacity style={{ alignSelf: 'center', padding: 5, backgroundColor: '#005131' }} onPress={() => this.onAddContact()}>
-                                        <Text style={{ alignSelf: 'center', fontFamily: 'Solway-Light', color: 'white' }}>{'Adicionar\nContato'}</Text>
-                                    </TouchableOpacity>
+                        <View style={styles.body} elevation={5}>
+                            <View style={{ padding: 10, alignItems: 'center' }}>
+                                <View elevation={5} style={styles.shadowImage}>
+                                    <Image source={{ uri: this.state.fotoPerfil }} style={styles.image} />
                                 </View>
                             </View>
-                            <Topicos topico={'Endereço'} />
-                            <Text style={styles.content}>
-                                {this.state.adress}
-                            </Text>
-                            <Topicos topico={'Objetivo'} />
-                            <Text style={styles.content}>
-                                {this.state.objetivo}
-                            </Text>
-                            <Topicos topico={'Um pouco sobre mim'} />
-                            <Text style={styles.content}>
-                                {this.state.desc}
-                                {'\n'}
-                            </Text>
+                            <View style={{ paddingBottom: 10 }}>
+                                <View elevation={5} style={styles.cont}>
+                                    <Topicos topico={'Contato'} />
+                                    <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                                        <View>
+                                            <View style={styles.itens}>
+                                                <Icon name={'phone'} size={15} />
+                                                <Text style={[styles.content, { paddingLeft: 10 }]}>{this.state.phone}</Text>
+                                            </View>
+                                            <View style={styles.itens}>
+                                                <Email name={'email'} />
+                                                <Text style={[styles.content, { paddingLeft: 10 }]}>{this.state.email}</Text>
+                                            </View>
+                                        </View>
+                                        <View style={{ alignItems: 'flex-end', justifyContent: 'flex-end', alignSelf: 'flex-end', }}>
+                                            <TouchableOpacity style={{ alignSelf: 'center', padding: 5, backgroundColor: '#005131' }} onPress={() => this.onAddContact()}>
+                                                <Text style={{ alignSelf: 'center', fontFamily: 'Solway-Light', color: 'white' }}>{'Adicionar\nContato'}</Text>
+                                            </TouchableOpacity>
+                                        </View>
+                                    </View>
+                                </View>
+                            </View>
+                            <View style={{ paddingBottom: 10 }}>
+                                <View elevation={5} style={styles.cont}>
+                                    <Topicos topico={'Endereço'} />
+                                    <Text style={styles.content}>
+                                        {this.state.adress}
+                                    </Text>
+                                </View>
+                            </View>
+                            <View style={{ paddingBottom: 10 }}>
+                                <View elevation={5} style={styles.cont}>
+                                    <Topicos topico={'Objetivo'} />
+                                    <Text style={styles.content}>
+                                        {this.state.objetivo}
+                                    </Text>
+                                </View>
+                            </View>
+                            <View style={{ paddingBottom: 10 }}>
+                                <View elevation={5} style={styles.cont}>
+                                    <Topicos topico={'Um pouco sobre mim'} />
+                                    <Text style={styles.content}>
+                                        {this.state.desc}
+                                        {'\n'}
+                                    </Text>
+                                </View>
+                            </View>
                         </View>
                     </ScrollView>
                 </ImageBackground>
@@ -112,7 +132,7 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     body: {
-        padding: 10
+        padding: 10,
     },
     content: {
         paddingRight: 10,
@@ -121,7 +141,6 @@ const styles = StyleSheet.create({
         textAlign: 'justify',
     },
     image: {
-        alignSelf: 'center',
         height: 220,
         width: 165,
         resizeMode: 'contain',
@@ -137,6 +156,7 @@ const styles = StyleSheet.create({
         justifyContent: "center",
     },
     cont: {
+        padding: 10,
         backgroundColor: 'white',
         shadowColor: "#000000",
         shadowOpacity: 0.8,
@@ -144,7 +164,24 @@ const styles = StyleSheet.create({
         shadowOffset: {
             height: 1,
             width: 1
-        }
+        },
+        borderRadius: 10,
+    },
+    shadowImage: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: 'white',
+        height: 210,
+        width: 185,
+        backgroundColor: 'white',
+        shadowColor: "#000000",
+        shadowOpacity: 0.8,
+        shadowRadius: 2,
+        shadowOffset: {
+            height: 1,
+            width: 1
+        },
+        borderRadius: 10,
     }
 })
 
