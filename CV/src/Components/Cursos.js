@@ -15,10 +15,9 @@ export default class Curso extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        padding: 10,
         flexDirection: 'row',
         alignItems: 'center',
-        flex: 1
+        flex: 1,
     },
     image: {
         width: 50,
