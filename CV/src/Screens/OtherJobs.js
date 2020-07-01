@@ -44,7 +44,6 @@ const styles = StyleSheet.create({
         justifyContent: "center",
     },
     scroll: {
-        padding: 15,
         flex: 1,
     },
 })

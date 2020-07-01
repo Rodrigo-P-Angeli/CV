@@ -5,9 +5,8 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome'
 export default class Job extends Component {
     render() {
         return (
-            <View>
-                <View style={{ height: 10 }} />
-                <View elevation={10} style={styles.container}>
+            <View style={{ padding: 10, paddingLeft: 20, paddingRight: 20 }}>
+                <View elevation={5} style={styles.container}>
                     <Text style={styles.name}>{this.props.name}</Text>
                     <View style={styles.icons}>
                         {this.props.linkGit ? <TouchableOpacity onPress={() => Linking.openURL(this.props.linkGit)}>
@@ -33,17 +32,10 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         borderRadius: 40,
-        //borderWidth: 1,
+        borderWidth: .5,
         borderColor: 'black',
         height: 80,
         backgroundColor: 'white',
-        shadowColor: "#000000",
-        shadowOpacity: 0.8,
-        shadowRadius: 2,
-        shadowOffset: {
-            height: 2,
-            width: 2
-        }
     },
     name: {
         fontFamily: 'Solway-Bold',
@@ -58,7 +50,7 @@ const styles = StyleSheet.create({
     },
     icons: {
         flexDirection: 'row',
-        flex: 1,
+        flex: 1.3,
         justifyContent: 'space-between',
         alignSelf: 'center'
     }
