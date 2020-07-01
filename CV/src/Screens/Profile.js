@@ -72,16 +72,16 @@ export default class Profile extends Component {
                                 <View>
                                     <View style={styles.itens}>
                                         <Icon name={'phone'} size={15} />
-                                        <Text style={styles.content}>{this.state.phone}</Text>
+                                        <Text style={[styles.content, { paddingLeft: 10 }]}>{this.state.phone}</Text>
                                     </View>
                                     <View style={styles.itens}>
                                         <Email name={'email'} />
-                                        <Text style={styles.content}>{this.state.email}</Text>
+                                        <Text style={[styles.content, { paddingLeft: 10 }]}>{this.state.email}</Text>
                                     </View>
                                 </View>
-                                <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+                                <View style={{ alignItems: 'flex-end', justifyContent: 'flex-end', alignSelf: 'flex-end', }}>
                                     <TouchableOpacity style={{ alignSelf: 'center', padding: 5, backgroundColor: '#94D8BD' }} onPress={() => this.onAddContact()}>
-                                        <Text style={{ alignSelf: 'center', fontFamily: 'Solway-Light' }}>{'Add to\nContacts'}</Text>
+                                        <Text style={{ alignSelf: 'center', fontFamily: 'Solway-Light' }}>{'Adicionar\nContacts'}</Text>
                                     </TouchableOpacity>
                                 </View>
                             </View>
@@ -115,7 +115,6 @@ const styles = StyleSheet.create({
         padding: 10
     },
     content: {
-        paddingLeft: 10,
         paddingRight: 10,
         fontSize: 15,
         fontFamily: 'Solway-Light',
