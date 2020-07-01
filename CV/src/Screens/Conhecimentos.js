@@ -30,17 +30,25 @@ export default class Conhecimentos extends Component {
             <View style={styles.container}>
                 <ImageBackground source={require('../assets/images/back-ground.jpg')} style={styles.backround}>
                     <Header {...this.props} />
-                    <ScrollView style={{ padding: 10 }}>
-                        <Topicos topico={'Línguas'} />
-                        <Text style={styles.linguas}>Português (Nativo)</Text>
-                        <Text style={styles.linguas}>Inglês (Avançado)</Text>
-                        <Text style={styles.linguas}>Francês (Avançado)</Text>
-                        <Topicos topico={'Cursos'} />
-                        <FlatList
-                            data={this.state.cursos}
-                            keyExtractor={() => `${Math.random()}`}
-                            renderItem={({ item }) => <Cursos image={item.logo} curso={item.name} />}
-                            numColumns={2} />
+                    <ScrollView>
+                        <View style={{ padding: 10 }}>
+                            <View elevation={5} style={styles.shadow}>
+                                <Topicos topico={'Línguas'} />
+                                <Text style={styles.linguas}>Português (Nativo)</Text>
+                                <Text style={styles.linguas}>Inglês (Avançado)</Text>
+                                <Text style={styles.linguas}>Francês (Avançado)</Text>
+                            </View>
+                        </View>
+                        <View style={{ padding: 10 }}>
+                            <View elevation={5} style={styles.shadow}>
+                                <Topicos topico={'Cursos'} />
+                                <FlatList
+                                    data={this.state.cursos}
+                                    keyExtractor={() => `${Math.random()}`}
+                                    renderItem={({ item }) => <Cursos image={item.logo} curso={item.name} />}
+                                    numColumns={2} />
+                            </View>
+                        </View>
                     </ScrollView>
                 </ImageBackground>
             </View>
@@ -64,7 +72,20 @@ const styles = StyleSheet.create({
         justifyContent: "center",
     },
     linguas: {
-        padding: 7.5,
-        fontFamily: 'Solway-Light'
+        fontFamily: 'Solway-Light',
+        paddingTop: 7.5
     },
+    shadow: {
+        padding: 10,
+        backgroundColor: 'white',
+        backgroundColor: 'white',
+        shadowColor: "#000000",
+        shadowOpacity: 0.9,
+        shadowRadius: 2,
+        shadowOffset: {
+            height: 1,
+            width: 1
+        },
+        borderRadius: 10,
+    }
 })
