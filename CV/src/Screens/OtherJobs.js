@@ -45,5 +45,6 @@ const styles = StyleSheet.create({
     },
     scroll: {
         padding: 15,
-    }
+        flex: 1,
+    },
 })
