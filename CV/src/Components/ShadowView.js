@@ -5,7 +5,7 @@ import { View, StyleSheet } from 'react-native'
 export default class ShadowView extends Component {
     render() {
         return (
-            <View style={this.props.style}>
+            <View style={[{ padding: 10 }, this.props.style]}>
                 <View elevation={5} style={styles.cont}>
                     {this.props.children}
                 </View>
