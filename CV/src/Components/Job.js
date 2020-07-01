@@ -25,16 +25,20 @@ export default class Job extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        padding: 10,
+        padding: 20,
         flex: 1,
         flexDirection: 'row',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        borderRadius: 40,
+        borderWidth: 3,
+        borderColor: '#999',
+        height: 80,
     },
     name: {
         fontFamily: 'Solway-Bold',
         fontSize: 20,
-        paddingBottom: 10,
         flex: 3,
+        alignSelf: 'center'
     },
     link: {
         fontFamily: 'Solway-Light',
@@ -45,5 +49,6 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         flex: 1,
         justifyContent: 'space-between',
+        alignSelf: 'center'
     }
 })
