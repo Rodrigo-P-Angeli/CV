@@ -20,7 +20,7 @@ export default class Conhecimentos extends Component {
     loadCertificados() {
         Axios.get('https://lambe-e09e6.firebaseio.com/certificados.json')
             .then(res => this.setState({ certificador: res.data }))
-            .catch(err => Alert.alert('Erro!','Por favor, verifique sua conecção com a internet'))
+            .catch(err => Alert.alert('Erro!', 'Por favor, verifique sua conecção com a internet'))
     }
 
     render() {
@@ -33,10 +33,10 @@ export default class Conhecimentos extends Component {
                             <FlatList
                                 keyExtractor={() => `${Math.random()}`}
                                 renderItem={({ item }) => {
-                                    return (<View style={{ alignItems: 'center', flex: 1 }}>
+                                    return (<View style={styles. item}>
                                         <Topicos topico={item.name} />
-                                        <View style={{height: 15}}/>
-                                        <ImageZoom style={{flex: 1, }}
+                                        <View style={{ height: 15 }} />
+                                        <ImageZoom style={{ flex: 1, }}
                                             cropWidth={400}//Dimensions.get('window').width}
                                             cropHeight={300}//Dimensions.get('window').height/4}
                                             imageWidth={400}
@@ -76,4 +76,9 @@ const styles = StyleSheet.create({
         resizeMode: "cover",
         justifyContent: "center",
     },
+    item: {
+        alignItems: 'center',
+        flex: 1,
+
+    }
 })
