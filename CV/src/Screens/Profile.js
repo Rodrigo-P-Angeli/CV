@@ -81,7 +81,7 @@ export default class Profile extends Component {
                                 </View>
                                 <View style={{ alignItems: 'flex-end', justifyContent: 'flex-end', alignSelf: 'flex-end', }}>
                                     <TouchableOpacity style={{ alignSelf: 'center', padding: 5, backgroundColor: '#94D8BD' }} onPress={() => this.onAddContact()}>
-                                        <Text style={{ alignSelf: 'center', fontFamily: 'Solway-Light' }}>{'Adicionar\nContacts'}</Text>
+                                        <Text style={{ alignSelf: 'center', fontFamily: 'Solway-Light' }}>{'Adicionar\nContato'}</Text>
                                     </TouchableOpacity>
                                 </View>
                             </View>
