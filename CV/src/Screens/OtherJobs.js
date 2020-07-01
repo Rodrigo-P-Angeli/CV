@@ -25,7 +25,7 @@ export default class OtherJobs extends Component {
             <View style={styles.container}>
                 <ImageBackground source={require('../assets/images/back-ground.jpg')} style={styles.backround}>
                     <Header {...this.props} title={'Outros trabalhos '} />
-                    <ScrollView style={styles.scroll}>
+                    <ScrollView>
                         {this.state.trabalhos.map(item => <Job {...item} key={Math.random()} />)}
                     </ScrollView>
                 </ImageBackground>
