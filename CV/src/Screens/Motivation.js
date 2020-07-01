@@ -9,7 +9,7 @@ export default class Conhecimentos extends Component {
         return (
             <View style={styles.container}>
                 <ImageBackground source={require('../assets/images/back-ground.jpg')} style={styles.backround}>
-                    <Header {...this.props} subtitle={'Motivação'} />
+                    <Header {...this.props} title={'Motivação '} />
                     <ScrollView style={{padding: 10}}>
                         <Topicos topico={'Motivação do trabalho'} />
                         <Text style={styles.content}>

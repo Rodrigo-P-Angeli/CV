@@ -11,10 +11,7 @@ export default class Header extends Component {
                     </TouchableOpacity>
                 </View>
                 <Text style={styles.title}>
-                    Rodrigo Pissinate De Angeli
-                </Text>
-                <Text style={styles.subtitle}>
-                    {this.props.subtitle ? this.props.subtitle : 'Curriculum Vitae'}
+                    {this.props.title ? this.props.title : 'Curriculum Vitae '}
                 </Text>
             </View>
         )
@@ -25,20 +22,23 @@ const styles = StyleSheet.create({
     container: {
         //backgroundColor: '#91E5F6',
         padding: 10,
+        flexDirection: 'row',
+        alignItems: 'center',
     },
+    // title: {
+    //     fontSize: 25,
+    //     //fontWeight: 'bold',
+    //     color: 'black',
+    //     textAlign: 'center',
+    //     fontFamily: 'Solway-ExtraBold' //Solway-Light
+    // },
     title: {
-        fontSize: 25,
-        //fontWeight: 'bold',
-        color: 'black',
-        textAlign: 'center',
-        fontFamily: 'Solway-ExtraBold' //Solway-Light
-    },
-    subtitle: {
         color: 'black',
         textAlign: 'center',
         fontSize: 35,
         paddingTop: 10,
-        fontFamily: 'GreatVibes-Regular'
+        fontFamily: 'GreatVibes-Regular',
+        paddingLeft: 40,
     },
     iconBar: {
         flexDirection: 'row',

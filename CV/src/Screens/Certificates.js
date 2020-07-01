@@ -27,7 +27,7 @@ export default class Conhecimentos extends Component {
         return (
             <View style={styles.container}>
                 <ImageBackground source={require('../assets/images/back-ground.jpg')} style={styles.backround}>
-                    <Header {...this.props} subtitle={'Certificados'} />
+                    <Header {...this.props} title={'Certificados '} />
                     <ScrollView>
                         <View style={{ alignItems: 'center', flex: 1 }}>
                             <FlatList
