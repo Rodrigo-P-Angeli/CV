@@ -65,7 +65,7 @@ export default class Profile extends Component {
                 <ImageBackground source={require('../assets/images/back-ground.jpg')} style={styles.backround}>
                     <Header {...this.props} />
                     <ScrollView>
-                        <View style={styles.body} elevation={5}>
+                        <View style={styles.body}>
                             <View style={{ padding: 10, alignItems: 'center' }}>
                                 <View elevation={5} style={styles.shadowImage}>
                                     <Image source={{ uri: this.state.fotoPerfil }} style={styles.image} />
@@ -141,9 +141,10 @@ const styles = StyleSheet.create({
         textAlign: 'justify',
     },
     image: {
-        height: 220,
-        width: 165,
         resizeMode: 'contain',
+        height: 220,
+        width: 185,
+
     },
     itens: {
         paddingTop: 5,
@@ -171,11 +172,11 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: 'white',
-        height: 210,
-        width: 185,
+        height: 220,
+        width: 200,
         backgroundColor: 'white',
         shadowColor: "#000000",
-        shadowOpacity: 0.8,
+        shadowOpacity: 0.9,
         shadowRadius: 2,
         shadowOffset: {
             height: 1,
