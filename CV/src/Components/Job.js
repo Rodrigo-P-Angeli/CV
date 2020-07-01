@@ -30,10 +30,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         flex: 1,
-        // borderRadius: 40,
-        // borderWidth: .5,
-        // borderColor: 'black',
-        // backgroundColor: 'white',
+        padding: 15,
     },
     name: {
         fontFamily: 'Solway-Bold',
