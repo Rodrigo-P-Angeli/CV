@@ -3,6 +3,7 @@ import { View, StyleSheet, ScrollView, Text, ImageBackground, Linking, Touchable
 
 import Header from '../Components/Header'
 import Topicos from '../Components/Topicos'
+import ShadowView from '../Components/ShadowView';
 
 export default class Conhecimentos extends Component {
     render() {
@@ -10,21 +11,23 @@ export default class Conhecimentos extends Component {
             <View style={styles.container}>
                 <ImageBackground source={require('../assets/images/back-ground.jpg')} style={styles.backround}>
                     <Header {...this.props} title={'Motivação '} />
-                    <ScrollView style={{padding: 10}}>
-                        <Topicos topico={'Motivação do trabalho'} />
-                        <Text style={styles.content}>
-                            {'\nDurante a pandemia, decidi começar a estudar React-Native para tentar realizar um'}
-                            {' projeto pessoal, percebi ao longo dos estudos que o mercado estava precisando de pessoas '}
-                            {'com o conhecimento de React-Native. Então, decidi aprofundar meus estudos para tentar me preparar'}
-                            {' para ser um futuro profissional na área.\n'}
-                            {'\nEste projeto tem o papel de mostrar alguns de meus conhecimentos do assunto, e também serviu '}
-                            {'para que eu aprendesse as bibliotecas atualizadas, uma vez que o curso que fiz trazia versões '}
-                            {'muito antigas como ex.: 2.X para a react-navigation, e estamos usando a 5.X neste projeto.'}
-                            {'\nTambém serviu para que eu pudesse aumentar meu portifólio e aprender a trabalhar em conjunto com o GitHub.\n'}
-                        </Text>
-                        <TouchableOpacity style={styles.link} onPress={() => { Linking.openURL('https://github.com/Rodrigo-P-Angeli/CV/tree/master/CV') }}>
-                            <Text style={styles.textLink}>Click para acessar o Git do Projeto</Text>
-                        </TouchableOpacity>
+                    <ScrollView>
+                        <ShadowView style={{padding: 10}}>
+                            <Topicos topico={'Motivação do trabalho'} />
+                            <Text style={styles.content} elevation={5}>
+                                {'\nDurante a pandemia, decidi começar a estudar React-Native para tentar realizar um'}
+                                {' projeto pessoal, percebi ao longo dos estudos que o mercado estava precisando de pessoas '}
+                                {'com o conhecimento de React-Native. Então, decidi aprofundar meus estudos para tentar me preparar'}
+                                {' para ser um futuro profissional na área.\n'}
+                                {'\nEste projeto tem o papel de mostrar alguns de meus conhecimentos do assunto, e também serviu '}
+                                {'para que eu aprendesse as bibliotecas atualizadas, uma vez que o curso que fiz trazia versões '}
+                                {'muito antigas como ex.: 2.X para a react-navigation, e estamos usando a 5.X neste projeto.'}
+                                {'\nTambém serviu para que eu pudesse aumentar meu portifólio e aprender a trabalhar em conjunto com o GitHub.\n'}
+                            </Text>
+                            <TouchableOpacity style={styles.link} onPress={() => { Linking.openURL('https://github.com/Rodrigo-P-Angeli/CV/tree/master/CV') }}>
+                                <Text style={styles.textLink}>Click para acessar o Git do Projeto</Text>
+                            </TouchableOpacity>
+                        </ShadowView>
                         <Topicos topico={'Descrição do projeto'} />
                         <Text style={styles.content}>
                             {'\nEste projeto tem por caracteristica mostrar minha capacidade criar um App com a biblioteca mais atual de navegação '}
