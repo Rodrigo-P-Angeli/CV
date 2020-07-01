@@ -35,7 +35,8 @@ export default class Conhecimentos extends Component {
                                 renderItem={({ item }) => {
                                     return (<View style={{ alignItems: 'center', flex: 1 }}>
                                         <Topicos topico={item.name} />
-                                        <ImageZoom
+                                        <View style={{height: 15}}/>
+                                        <ImageZoom style={{flex: 1, }}
                                             cropWidth={400}//Dimensions.get('window').width}
                                             cropHeight={300}//Dimensions.get('window').height/4}
                                             imageWidth={400}
