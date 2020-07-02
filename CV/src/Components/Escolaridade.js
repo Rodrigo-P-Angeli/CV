@@ -24,7 +24,6 @@ export default class Escolaridade extends Component {
 const styles = StyleSheet.create({
     container: {
         padding: 10,
-        paddingTop: 30,
         flex: 1,
     },
     image: {
