@@ -37,7 +37,7 @@ export default class Experience extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Header {...this.props} />
+                <Header {...this.props} subtitle={'Experiências'} />
                 <ImageBackground source={require('../assets/images/back-ground.jpg')} style={styles.backround}>
                     <ScrollView>
                         <View style={styles.topico}>

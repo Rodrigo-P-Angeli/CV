@@ -14,9 +14,10 @@ export default class Header extends Component {
                     <Text style={styles.title}>
                         {this.props.title ? this.props.title : 'Curriculum Vitae '}
                     </Text>
-                    <Text style={styles.subtitle}>
-                        {this.props.subtitle ? this.props.subtitle : null}
-                    </Text>
+                    {this.props.subtitle ?
+                        <Text style={styles.subtitle}>
+                            {this.props.subtitle}
+                        </Text> : null}
                 </View>
             </View>
         )
@@ -27,7 +28,8 @@ const styles = StyleSheet.create({
     container: {
         padding: 10,
         flexDirection: 'row',
-        backgroundColor: 'white'
+        backgroundColor: 'white',
+        paddingTop: 20,
     },
     title: {
         color: 'black',
@@ -43,6 +45,6 @@ const styles = StyleSheet.create({
         color: 'black',
         fontSize: 15,
         fontFamily: 'Solway-Medium',
-        paddingLeft: 50,
+        paddingLeft: 35,
     }
 })

@@ -63,7 +63,7 @@ export default class Profile extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Header {...this.props} subtitle={'Rodrigo Pissinate De Angeli'} />
+                <Header {...this.props} subtitle={'Perfil'} />
                 <ImageBackground source={require('../assets/images/back-ground.jpg')} style={styles.backround}>
                     <ScrollView style={{ paddingTop: 20, flex: 1 }}>
                         <ShadowView style={styles.shadowImage}>

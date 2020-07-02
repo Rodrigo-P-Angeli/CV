@@ -28,7 +28,7 @@ export default class Conhecimentos extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Header {...this.props} />
+                <Header {...this.props} subtitle={'Cursos e Línguas'}/>
                 <ImageBackground source={require('../assets/images/back-ground.jpg')} style={styles.backround}>
                     <ScrollView>
                         <View style={{ padding: 10 }}>
