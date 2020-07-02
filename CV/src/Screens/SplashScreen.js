@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, StyleSheet, ActivityIndicator, ImageBackground } from 'react-native'
+import { View, StyleSheet, ActivityIndicator, ImageBackground, Text } from 'react-native'
 
 
 export default class Splash extends Component {
@@ -8,11 +8,12 @@ export default class Splash extends Component {
     }
     render() {
         return (
-            <View style={styles.container}>
-                <ImageBackground source={require('../assets/images/CLA_1362.jpg')} style={{flex: 1}}>
-                    <ActivityIndicator size={'large'} />
-                </ImageBackground>
-            </View>
+            <ImageBackground source={require('../assets/images/CLA_1362.jpg')} style={styles.backGround}>
+                <View style={styles.container}>
+                    <Text>Rodrigo Pissinate De Angeli</Text>
+                    <ActivityIndicator size={'large'} style={styles.ActInd} />
+                </View>
+            </ImageBackground>
         )
     }
 }
@@ -20,8 +21,14 @@ export default class Splash extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#999',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'space-around'
+    },
+    backGround: {
+        flex: 1,
+        resizeMode: 'contain'
+    },
+    ActInd: {
+        backgroundColor: 'white'
     }
 })
