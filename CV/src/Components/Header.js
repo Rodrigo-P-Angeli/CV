@@ -4,7 +4,7 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 export default class Header extends Component {
     render() {
         return (
-            <View style={styles.container}>
+            <View style={styles.container} elevation={5}>
                 <View style={styles.iconBar}>
                     <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} >
                         <Icon name={"bars"} size={30} color="black" />
@@ -20,18 +20,11 @@ export default class Header extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        //backgroundColor: '#91E5F6',
         padding: 10,
         flexDirection: 'row',
         alignItems: 'center',
+        backgroundColor: 'white'
     },
-    // title: {
-    //     fontSize: 25,
-    //     //fontWeight: 'bold',
-    //     color: 'black',
-    //     textAlign: 'center',
-    //     fontFamily: 'Solway-ExtraBold' //Solway-Light
-    // },
     title: {
         color: 'black',
         textAlign: 'center',
