@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, ScrollView, ImageBackground } from 'react-native';
+
+import ShadowView from '../Components/ShadowView'
 import Header from '../Components/Header'
 import Topicos from '../Components/Topicos'
 import Escolaridade from '../Components/Escolaridade'
@@ -14,19 +16,21 @@ export default class Formation extends Component {
                 <ImageBackground source={require('../assets/images/back-ground.jpg')} style={styles.backround}>
                     <Header {...this.props} />
                     <ScrollView >
-                        <View style={{padding: 10}}>
-                            <Topicos topico={'Formação Acadêmica'} />
+                        <Topicos topico={'Formação Acadêmica'} />
+                        <ShadowView>
                             <Escolaridade
                                 image={logoUfes}
                                 escola={'Universidade Federal do Espírito Santo'}
                                 periodo={'mar/2013 - jul/2018'}
                                 curso={'Engenharia Mecânica'} />
+                        </ShadowView>
+                        <ShadowView>
                             <Escolaridade
                                 image={logoIfes}
                                 escola={'Instituto Federal do Espírito Santo'}
                                 periodo={'fev/2009 - dez/2012'}
                                 curso={'Técnico Mecânica integrado ao ensino médio'} />
-                        </View>
+                        </ShadowView>
                     </ScrollView>
                 </ImageBackground>
             </View>
@@ -38,16 +42,9 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
     },
-    body: {
-        padding: 10
-    },
-    content: {
-        paddingLeft: 10,
-        paddingTop: 10,
-    },
     backround: {
         flex: 1,
-        resizeMode: "cover",
+        resizeMode: "contain",
         justifyContent: "center",
     }
 })
