@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, StyleSheet, ActivityIndicator } from 'react-native'
+import { View, StyleSheet, ActivityIndicator, ImageBackground } from 'react-native'
 
 
 export default class Splash extends Component {
@@ -9,7 +9,9 @@ export default class Splash extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <ActivityIndicator size={'large'} />
+                <ImageBackground source={require('../assets/images/CLA_1362.jpg')} style={{flex: 1}}>
+                    <ActivityIndicator size={'large'} />
+                </ImageBackground>
             </View>
         )
     }
