@@ -37,9 +37,9 @@ export default class Conhecimentos extends Component {
                                         <Topicos topico={item.name} />
                                         <View style={{ height: 5 }} />
                                         <ImageZoom 
-                                            cropWidth={Dimensions.get('window').width}
+                                            cropWidth={Dimensions.get('window').width/8*7}
                                             cropHeight={Dimensions.get('window').height/3}
-                                            imageWidth={Dimensions.get('window').width}
+                                            imageWidth={Dimensions.get('window').width/8*7}
                                             imageHeight={Dimensions.get('window').height/3}>
                                             <Image source={{ uri: item.foto }} style={styles.image} />
                                         </ImageZoom>
@@ -61,8 +61,8 @@ const styles = StyleSheet.create({
     image: {
         resizeMode: 'contain',
         alignSelf: 'center',
-        height: 300,
-        width: 400,
+        height: Dimensions.get('window').height/3,
+        width: Dimensions.get('window').width/8*7,
     },
     backround: {
         flex: 1,
