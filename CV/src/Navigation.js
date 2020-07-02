@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createStackNavigator } from '@react-navigation/stack'
 import Fontisto from 'react-native-vector-icons/Fontisto'
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
@@ -14,14 +15,28 @@ import MenuDrawer from './Components/MenuDrawer'
 import Certificates from './Screens/Certificates'
 import Motivation from './Screens/Motivation'
 import OtherJobs from './Screens/OtherJobs'
+import SplashScreen from './Screens/SplashScreen'
 
 const Tab = createBottomTabNavigator();
 const Drawer = createDrawerNavigator();
+const Stack = createStackNavigator();
+const initialState = {
+  loaded: false
+}
+
 
 export default class Navigation extends Component {
   state = {
-    nome: 'Rodrigo'
+    ...initialState
   }
+  componentDidMount() {
+    if (this.state.loaded) {
+      return
+    } else {
+      setTimeout(() => this.setState({ loaded: true }), 2000)
+    }
+  }
+
   bottomTab() {
     return (
       <Tab.Navigator initialRouteName="Perfil" tabBarOptions={tabBar} backBehavior={'initialRoute'}>
@@ -66,17 +81,40 @@ export default class Navigation extends Component {
   render() {
     return (
       <NavigationContainer>
-        <Drawer.Navigator
-          initialRouteName='CV'
-          drawerContent={props => <MenuDrawer {...props} />}
-          drawerContentOptions={drawerOptions}
-          backBehavior={'initialRoute'}>
-          <Drawer.Screen name="CV" component={this.bottomTab} />
-          <Drawer.Screen name="Introdução" component={Motivation} />
-          <Drawer.Screen name="Certificados" component={Certificates} />
-          <Drawer.Screen name="Outros Trabalhos" component={OtherJobs} />
-        </Drawer.Navigator>
+        {this.state.loaded ?
+          <Stack.Navigator headerMode='none'>
+            <Stack.Screen name="Home" >
+              {() => <Drawer.Navigator
+                initialRouteName='CV'
+                drawerContent={props => <MenuDrawer {...props} />}
+                drawerContentOptions={drawerOptions}
+                backBehavior={'initialRoute'}>
+                <Drawer.Screen name="CV" component={this.bottomTab} backBehavior={'none'} />
+                <Drawer.Screen name="Introdução" component={Motivation} />
+                <Drawer.Screen name="Certificados" component={Certificates} />
+                <Drawer.Screen name="Outros Trabalhos" component={OtherJobs} />
+              </Drawer.Navigator>}
+            </Stack.Screen>
+          </Stack.Navigator>
+          : <Stack.Navigator headerMode='none'>
+            <Stack.Screen name="SplashScreen">
+              {(props) => <SplashScreen {...props} />}
+            </Stack.Screen>
+            <Stack.Screen name="Home" >
+              {() => <Drawer.Navigator
+                initialRouteName='CV'
+                drawerContent={props => <MenuDrawer {...props} />}
+                drawerContentOptions={drawerOptions}
+                backBehavior={'initialRoute'}>
+                <Drawer.Screen name="CV" component={this.bottomTab} backBehavior={'none'} />
+                <Drawer.Screen name="Introdução" component={Motivation} />
+                <Drawer.Screen name="Certificados" component={Certificates} />
+                <Drawer.Screen name="Outros Trabalhos" component={OtherJobs} />
+              </Drawer.Navigator>}
+            </Stack.Screen>
+          </Stack.Navigator>}
       </NavigationContainer>
+
     )
   }
 }

@@ -3,8 +3,8 @@ import { View, StyleSheet, ActivityIndicator } from 'react-native'
 
 
 export default class Splash extends Component {
-    UNSAFE_componentWillMount = () => {
-        setTimeout(() => { this.props.navigation.navigate('App') }, 3000)
+    componentDidMount = () => {
+        setTimeout(() => { this.props.navigation.navigate('Home') }, 2000)
     }
     render() {
         return (
@@ -18,6 +18,8 @@ export default class Splash extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#999'
+        backgroundColor: '#999',
+        alignItems: 'center',
+        justifyContent: 'center'
     }
 })
