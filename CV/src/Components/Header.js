@@ -6,7 +6,7 @@ export default class Header extends Component {
         return (
             <View style={styles.container} elevation={10}>
                 <View style={styles.iconBar}>
-                    <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} >
+                    <TouchableOpacity onPress={() => this.props.navigation.openDrawer()}>
                         <Icon name={"bars"} size={30} color="black" />
                     </TouchableOpacity>
                 </View>
@@ -38,7 +38,6 @@ const styles = StyleSheet.create({
         paddingLeft: 35,
     },
     iconBar: {
-        flexDirection: 'row',
         paddingTop: 3,
     },
     subtitle: {
