@@ -66,9 +66,11 @@ export default class Profile extends Component {
                 <ImageBackground source={require('../assets/images/back-ground.jpg')} style={styles.backround}>
                     <Header {...this.props} />
                     <ScrollView>
-                        <ShadowView style={styles.shadowImage}>
-                            <Image source={{ uri: this.state.fotoPerfil }} style={styles.image} />
-                        </ShadowView>
+                        <View style={{paddingTop: 30}}>
+                            <ShadowView style={styles.shadowImage}>
+                                <Image source={{ uri: this.state.fotoPerfil }} style={styles.image} />
+                            </ShadowView>
+                        </View>
                         <ShadowView>
                             <Topicos topico={'Contato'} />
                             <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
