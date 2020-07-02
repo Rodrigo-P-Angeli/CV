@@ -85,7 +85,6 @@ export default class Navigation extends Component {
 const tabBar = {
   activeTintColor: '#005131',
   inactiveTintColor: '#ABF9DA',
-  //inactiveTintColor: '#94D8BD',
   labelStyle: {
     fontFamily: 'Solway-Light',
     fontSize: 10,
@@ -97,6 +96,6 @@ const drawerOptions = {
     fontFamily: 'Solway-Light',
     fontSize: 20,
   },
-  activeTintColor: 'black',
-  inactiveTintColor: '#94D8BD',
+  activeTintColor: '#005131',
+  inactiveTintColor: '#ABF9DA',
 }
