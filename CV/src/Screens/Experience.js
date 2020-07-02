@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, ScrollView, Alert, ImageBackground } from 'react-native';
-import Header from '../Components/Header'
-import Exp from '../Components/Exp'
-
 import axios from 'axios'
+
+import Exp from '../Components/Exp'
+import Header from '../Components/Header'
 import Topicos from '../Components/Topicos'
+import ShadowView from '../Components/ShadowView'
 
 export default class Experience extends Component {
     state = {
@@ -40,14 +41,18 @@ export default class Experience extends Component {
                 <Header {...this.props} subtitle={'Experiências'} />
                 <ImageBackground source={require('../assets/images/back-ground.jpg')} style={styles.backround}>
                     <ScrollView>
-                        <View style={styles.topico}>
-                            <Topicos topico={'Experiências comprovadas'} />
-                        </View>
-                        {this.state.experencias.map(item => <Exp key={Math.random()} {...item} />)}
-                        <View style={styles.topico}>
-                            <Topicos topico={'Outras experiências'} />
-                        </View>
-                        {this.state.outrasExperencias.map(item => <Exp key={Math.random()} {...item} />)}
+                        <ShadowView>
+                            <View style={styles.topico}>
+                                <Topicos topico={'Experiências comprovadas'} />
+                            </View>
+                            {this.state.experencias.map(item => <Exp key={Math.random()} {...item} />)}
+                        </ShadowView>
+                        <ShadowView>
+                            <View style={styles.topico}>
+                                <Topicos topico={'Outras experiências'} />
+                            </View>
+                            {this.state.outrasExperencias.map(item => <Exp key={Math.random()} {...item} />)}
+                        </ShadowView>
                     </ScrollView>
                 </ImageBackground>
             </View>
