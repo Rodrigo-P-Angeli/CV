@@ -26,14 +26,14 @@ export default class Conhecimentos extends Component {
     render() {
         return (
             <View style={styles.container}>
+                <Header {...this.props} title={'Certificados '} />
                 <ImageBackground source={require('../assets/images/back-ground.jpg')} style={styles.backround}>
-                    <Header {...this.props} title={'Certificados '} />
                     <ScrollView>
                         <View style={{ alignItems: 'center', flex: 1 }}>
                             <FlatList
                                 keyExtractor={() => `${Math.random()}`}
                                 renderItem={({ item }) => {
-                                    return (<View style={styles. item}>
+                                    return (<View style={styles.item}>
                                         <Topicos topico={item.name} />
                                         <View style={{ height: 15 }} />
                                         <ImageZoom style={{ flex: 1, }}

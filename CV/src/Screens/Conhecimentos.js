@@ -28,8 +28,8 @@ export default class Conhecimentos extends Component {
     render() {
         return (
             <View style={styles.container}>
+                <Header {...this.props} />
                 <ImageBackground source={require('../assets/images/back-ground.jpg')} style={styles.backround}>
-                    <Header {...this.props} />
                     <ScrollView>
                         <View style={{ padding: 10 }}>
                             <View elevation={5} style={styles.shadow}>

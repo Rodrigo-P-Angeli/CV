@@ -63,14 +63,12 @@ export default class Profile extends Component {
     render() {
         return (
             <View style={styles.container}>
+                <Header {...this.props} />
                 <ImageBackground source={require('../assets/images/back-ground.jpg')} style={styles.backround}>
-                    <Header {...this.props} />
-                    <ScrollView>
-                        <View style={{paddingTop: 30}}>
-                            <ShadowView style={styles.shadowImage}>
-                                <Image source={{ uri: this.state.fotoPerfil }} style={styles.image} />
-                            </ShadowView>
-                        </View>
+                    <ScrollView style={{ paddingTop: 20, flex: 1 }}>
+                        <ShadowView style={styles.shadowImage}>
+                            <Image source={{ uri: this.state.fotoPerfil }} style={styles.image} />
+                        </ShadowView>
                         <ShadowView>
                             <Topicos topico={'Contato'} />
                             <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
@@ -107,9 +105,9 @@ export default class Profile extends Component {
                             <Topicos topico={'Um pouco sobre mim'} />
                             <Text style={styles.content}>
                                 {this.state.desc}
-                                {'\n'}
                             </Text>
                         </ShadowView>
+                        <View style={{ height: 30 }} />
                     </ScrollView>
                 </ImageBackground>
             </View>

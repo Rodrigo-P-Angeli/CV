@@ -13,8 +13,8 @@ export default class Formation extends Component {
     render() {
         return (
             <View style={styles.container}>
+                <Header {...this.props} />
                 <ImageBackground source={require('../assets/images/back-ground.jpg')} style={styles.backround}>
-                    <Header {...this.props} />
                     <ScrollView >
                         <Topicos topico={'Formação Acadêmica'} />
                         <ShadowView>

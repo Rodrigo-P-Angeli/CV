@@ -37,17 +37,17 @@ export default class Experience extends Component {
     render() {
         return (
             <View style={styles.container}>
+                <Header {...this.props} />
                 <ImageBackground source={require('../assets/images/back-ground.jpg')} style={styles.backround}>
-                    <Header {...this.props} />
                     <ScrollView>
                         <View style={styles.topico}>
                             <Topicos topico={'Experiências comprovadas'} />
                         </View>
-                        {this.state.experencias.map(item => <Exp key={Math.random()} {...item}/>)}
+                        {this.state.experencias.map(item => <Exp key={Math.random()} {...item} />)}
                         <View style={styles.topico}>
                             <Topicos topico={'Outras experiências'} />
                         </View>
-                        {this.state.outrasExperencias.map(item => <Exp key={Math.random()} {...item}/>)}
+                        {this.state.outrasExperencias.map(item => <Exp key={Math.random()} {...item} />)}
                     </ScrollView>
                 </ImageBackground>
             </View>
