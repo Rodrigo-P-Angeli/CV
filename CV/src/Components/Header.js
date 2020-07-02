@@ -4,7 +4,7 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 export default class Header extends Component {
     render() {
         return (
-            <View style={styles.container} elevation={5}>
+            <View style={styles.container} elevation={10}>
                 <View style={styles.iconBar}>
                     <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} >
                         <Icon name={"bars"} size={30} color="black" />
