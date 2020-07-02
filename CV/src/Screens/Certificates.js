@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, ScrollView, Image, ImageBackground, FlatList, Alert } from 'react-native';
+import { View, StyleSheet, ScrollView, Image, ImageBackground, FlatList, Alert, Dimensions } from 'react-native';
 import ImageZoom from 'react-native-image-pan-zoom';
 import Axios from 'axios'
 
 import Header from '../Components/Header'
 import Topicos from '../Components/Topicos'
-
+import ShadowView from '../Components/ShadowView'
 
 
 export default class Conhecimentos extends Component {
@@ -33,17 +33,17 @@ export default class Conhecimentos extends Component {
                             <FlatList
                                 keyExtractor={() => `${Math.random()}`}
                                 renderItem={({ item }) => {
-                                    return (<View style={styles.item}>
+                                    return (<ShadowView style={styles.item}>
                                         <Topicos topico={item.name} />
-                                        <View style={{ height: 15 }} />
-                                        <ImageZoom style={{ flex: 1, }}
-                                            cropWidth={400}//Dimensions.get('window').width}
-                                            cropHeight={300}//Dimensions.get('window').height/4}
-                                            imageWidth={400}
-                                            imageHeight={300}>
+                                        <View style={{ height: 5 }} />
+                                        <ImageZoom 
+                                            cropWidth={Dimensions.get('window').width}
+                                            cropHeight={Dimensions.get('window').height/3}
+                                            imageWidth={Dimensions.get('window').width}
+                                            imageHeight={Dimensions.get('window').height/3}>
                                             <Image source={{ uri: item.foto }} style={styles.image} />
                                         </ImageZoom>
-                                    </View>)
+                                    </ShadowView>)
                                 }}
                                 data={this.state.certificador} />
                         </View>
@@ -58,13 +58,6 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
     },
-    body: {
-        padding: 10
-    },
-    content: {
-        paddingLeft: 10,
-        paddingTop: 10,
-    },
     image: {
         resizeMode: 'contain',
         alignSelf: 'center',
@@ -73,12 +66,12 @@ const styles = StyleSheet.create({
     },
     backround: {
         flex: 1,
-        resizeMode: "cover",
+        resizeMode: "contain",
         justifyContent: "center",
     },
     item: {
         alignItems: 'center',
         flex: 1,
-
+        justifyContent: 'center'
     }
 })
