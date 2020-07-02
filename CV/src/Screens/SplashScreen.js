@@ -10,7 +10,7 @@ export default class Splash extends Component {
         return (
             <ImageBackground source={require('../assets/images/CLA_1362.jpg')} style={styles.backGround}>
                 <View style={styles.container}>
-                    <Text>Rodrigo Pissinate De Angeli</Text>
+                    <Text style={styles.title}>Rodrigo Pissinate De Angeli</Text>
                     <ActivityIndicator size={'large'} style={styles.ActInd} />
                 </View>
             </ImageBackground>
