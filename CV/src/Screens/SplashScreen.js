@@ -10,8 +10,13 @@ export default class Splash extends Component {
         return (
             <ImageBackground source={require('../assets/images/CLA_1362.jpg')} style={styles.backGround}>
                 <View style={styles.container}>
-                    <Text style={styles.title}>Rodrigo Pissinate De Angeli</Text>
-                    <ActivityIndicator size={'large'} style={styles.ActInd} />
+                    <Text style={styles.cv}>Curriculum Vitae </Text>
+                    <View>
+                        <Text elevation={5} style={styles.title}>Rodrigo Pissinate De Angeli </Text>
+                        <View>
+                            <ActivityIndicator size={'large'} style={styles.ActInd} />
+                        </View>
+                    </View>
                 </View>
             </ImageBackground>
         )
@@ -29,6 +34,19 @@ const styles = StyleSheet.create({
         resizeMode: 'contain'
     },
     ActInd: {
-        backgroundColor: 'white'
+        backgroundColor: '#999',
+        alignSelf: 'center'
+    },
+    title: {
+        fontFamily: 'Solway-Bold',
+        color: 'white',
+        fontSize: 30,
+        textAlign: 'center',
+    },
+    cv: {
+        fontFamily: 'GreatVibes-Regular',
+        color: 'white',
+        fontSize: 40,
+        textAlign: 'center',
     }
 })
