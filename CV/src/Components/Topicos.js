@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
         fontSize: 20,
         borderBottomColor: 'black',
         borderBottomWidth: 1,
-        fontFamily: 'Solway-Medium'
+        fontFamily: 'Solway-Light',
     },
 })
 
