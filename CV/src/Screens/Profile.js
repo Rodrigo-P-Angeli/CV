@@ -18,6 +18,7 @@ import Email from 'react-native-vector-icons/MaterialCommunityIcons'
 
 import Header from '../Components/Header'
 import Topicos from '../Components/Topicos'
+import ShadowView from '../Components/ShadowView'
 
 export default class Profile extends Component {
     state = {}
@@ -65,60 +66,48 @@ export default class Profile extends Component {
                 <ImageBackground source={require('../assets/images/back-ground.jpg')} style={styles.backround}>
                     <Header {...this.props} />
                     <ScrollView>
-                        <View style={styles.body}>
-                            <View style={{ padding: 10, alignItems: 'center' }}>
-                                <View elevation={5} style={styles.shadowImage}>
-                                    <Image source={{ uri: this.state.fotoPerfil }} style={styles.image} />
-                                </View>
-                            </View>
-                            <View style={{ paddingBottom: 10 }}>
-                                <View elevation={5} style={styles.cont}>
-                                    <Topicos topico={'Contato'} />
-                                    <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                                        <View>
-                                            <View style={styles.itens}>
-                                                <Icon name={'phone'} size={15} />
-                                                <Text style={[styles.content, { paddingLeft: 10 }]}>{this.state.phone}</Text>
-                                            </View>
-                                            <View style={styles.itens}>
-                                                <Email name={'email'} />
-                                                <Text style={[styles.content, { paddingLeft: 10 }]}>{this.state.email}</Text>
-                                            </View>
-                                        </View>
-                                        <View style={{ alignItems: 'flex-end', justifyContent: 'flex-end', alignSelf: 'flex-end', }}>
-                                            <TouchableOpacity style={{ alignSelf: 'center', padding: 5, backgroundColor: '#005131' }} onPress={() => this.onAddContact()}>
-                                                <Text style={{ alignSelf: 'center', fontFamily: 'Solway-Light', color: 'white' }}>{'Adicionar\nContato'}</Text>
-                                            </TouchableOpacity>
-                                        </View>
+                        <ShadowView style={styles.shadowImage}>
+                            <Image source={{ uri: this.state.fotoPerfil }} style={styles.image} />
+                        </ShadowView>
+                        <ShadowView>
+                            <Topicos topico={'Contato'} />
+                            <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                                <View>
+                                    <View style={styles.itens}>
+                                        <Icon name={'phone'} size={15} />
+                                        <Text style={[styles.content, { paddingLeft: 10 }]}>{this.state.phone}</Text>
+                                    </View>
+                                    <View style={styles.itens}>
+                                        <Email name={'email'} />
+                                        <Text style={[styles.content, { paddingLeft: 10 }]}>{this.state.email}</Text>
                                     </View>
                                 </View>
-                            </View>
-                            <View style={{ paddingBottom: 10 }}>
-                                <View elevation={5} style={styles.cont}>
-                                    <Topicos topico={'Endereço'} />
-                                    <Text style={styles.content}>
-                                        {this.state.adress}
-                                    </Text>
+                                <View style={{ alignItems: 'flex-end', justifyContent: 'flex-end', alignSelf: 'flex-end', }}>
+                                    <TouchableOpacity style={{ alignSelf: 'center', padding: 5, backgroundColor: '#005131' }} onPress={() => this.onAddContact()}>
+                                        <Text style={{ alignSelf: 'center', fontFamily: 'Solway-Light', color: 'white' }}>{'Adicionar\nContato'}</Text>
+                                    </TouchableOpacity>
                                 </View>
                             </View>
-                            <View style={{ paddingBottom: 10 }}>
-                                <View elevation={5} style={styles.cont}>
-                                    <Topicos topico={'Objetivo'} />
-                                    <Text style={styles.content}>
-                                        {this.state.objetivo}
-                                    </Text>
-                                </View>
-                            </View>
-                            <View style={{ paddingBottom: 10 }}>
-                                <View elevation={5} style={styles.cont}>
-                                    <Topicos topico={'Um pouco sobre mim'} />
-                                    <Text style={styles.content}>
-                                        {this.state.desc}
-                                        {'\n'}
-                                    </Text>
-                                </View>
-                            </View>
-                        </View>
+                        </ShadowView>
+                        <ShadowView>
+                            <Topicos topico={'Endereço'} />
+                            <Text style={styles.content}>
+                                {this.state.adress}
+                            </Text>
+                        </ShadowView>
+                        <ShadowView>
+                            <Topicos topico={'Objetivo'} />
+                            <Text style={styles.content}>
+                                {this.state.objetivo}
+                            </Text>
+                        </ShadowView>
+                        <ShadowView>
+                            <Topicos topico={'Um pouco sobre mim'} />
+                            <Text style={styles.content}>
+                                {this.state.desc}
+                                {'\n'}
+                            </Text>
+                        </ShadowView>
                     </ScrollView>
                 </ImageBackground>
             </View>
@@ -131,9 +120,6 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
     },
-    body: {
-        padding: 10,
-    },
     content: {
         paddingRight: 10,
         fontSize: 15,
@@ -144,7 +130,6 @@ const styles = StyleSheet.create({
         resizeMode: 'contain',
         height: 220,
         width: 185,
-
     },
     itens: {
         paddingTop: 5,
@@ -156,33 +141,12 @@ const styles = StyleSheet.create({
         resizeMode: "cover",
         justifyContent: "center",
     },
-    cont: {
-        padding: 10,
-        backgroundColor: 'white',
-        shadowColor: "#000000",
-        shadowOpacity: 0.8,
-        shadowRadius: 2,
-        shadowOffset: {
-            height: 1,
-            width: 1
-        },
-        borderRadius: 10,
-    },
     shadowImage: {
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: 'white',
+        alignSelf: 'center',
         height: 220,
         width: 200,
-        backgroundColor: 'white',
-        shadowColor: "#000000",
-        shadowOpacity: 0.9,
-        shadowRadius: 2,
-        shadowOffset: {
-            height: 1,
-            width: 1
-        },
-        borderRadius: 10,
     }
 })
 
