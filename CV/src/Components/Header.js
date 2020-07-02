@@ -10,7 +10,7 @@ export default class Header extends Component {
                         <Icon name={"bars"} size={30} color="black" />
                     </TouchableOpacity>
                 </View>
-                <View>
+                <View style={{ flex: 1 }}>
                     <Text style={styles.title}>
                         {this.props.title ? this.props.title : 'Curriculum Vitae '}
                     </Text>
@@ -27,27 +27,22 @@ const styles = StyleSheet.create({
     container: {
         padding: 10,
         flexDirection: 'row',
-        alignItems: 'center',
         backgroundColor: 'white'
     },
     title: {
         color: 'black',
-        textAlign: 'center',
         fontSize: 35,
-        paddingTop: 10,
         fontFamily: 'GreatVibes-Regular',
-        paddingLeft: 40,
+        paddingLeft: 35,
     },
     iconBar: {
         flexDirection: 'row',
-        justifyContent: 'flex-start'
+        paddingTop: 3,
     },
     subtitle: {
         color: 'black',
-        textAlign: 'center',
-        fontSize: 20,
-        paddingTop: 10,
-        fontFamily: 'Solway-Light',
-        paddingLeft: 40,
+        fontSize: 15,
+        fontFamily: 'Solway-Medium',
+        paddingLeft: 50,
     }
 })
