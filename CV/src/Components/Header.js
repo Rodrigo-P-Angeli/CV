@@ -10,9 +10,14 @@ export default class Header extends Component {
                         <Icon name={"bars"} size={30} color="black" />
                     </TouchableOpacity>
                 </View>
-                <Text style={styles.title}>
-                    {this.props.title ? this.props.title : 'Curriculum Vitae '}
-                </Text>
+                <View>
+                    <Text style={styles.title}>
+                        {this.props.title ? this.props.title : 'Curriculum Vitae '}
+                    </Text>
+                    <Text style={styles.subtitle}>
+                        {this.props.subtitle ? this.props.subtitle : null}
+                    </Text>
+                </View>
             </View>
         )
     }
@@ -35,5 +40,14 @@ const styles = StyleSheet.create({
     },
     iconBar: {
         flexDirection: 'row',
+        justifyContent: 'flex-start'
     },
+    subtitle: {
+        color: 'black',
+        textAlign: 'center',
+        fontSize: 20,
+        paddingTop: 10,
+        fontFamily: 'Solway-Light',
+        paddingLeft: 40,
+    }
 })
