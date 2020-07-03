@@ -12,7 +12,7 @@ export default class Splash extends Component {
                 <View style={styles.container}>
                     <Text style={styles.cv}>Curriculum Vitae </Text>
                     <View>
-                        <Text elevation={5} style={styles.title}>Rodrigo Pissinate De Angeli </Text>
+                        <Text style={styles.title}>Rodrigo Pissinate De Angeli </Text>
                         <ActivityIndicator size={'large'} style={styles.ActInd} />
                     </View>
                 </View>
@@ -25,25 +25,23 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: 'center',
-        justifyContent: 'space-around'
+        justifyContent: 'space-around',
     },
     backGround: {
         flex: 1,
         resizeMode: 'contain',
-        opacity: .6
+        opacity: .5
     },
     ActInd: {
         alignSelf: 'center'
     },
     title: {
         fontFamily: 'Solway-Bold',
-        //color: 'white',
         fontSize: 30,
         textAlign: 'center',
     },
     cv: {
         fontFamily: 'GreatVibes-Regular',
-        //color: 'white',
         fontSize: 50,
         textAlign: 'center',
     }
