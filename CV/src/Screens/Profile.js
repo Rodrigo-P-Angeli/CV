@@ -123,7 +123,7 @@ const styles = StyleSheet.create({
     content: {
         paddingRight: 10,
         fontSize: 15,
-        fontFamily: 'Solway-Light',
+        fontFamily: 'Roboto-Light',
         textAlign: 'justify',
     },
     image: {

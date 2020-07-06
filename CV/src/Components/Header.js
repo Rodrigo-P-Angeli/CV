@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     subtitle: {
         color: 'black',
         fontSize: 15,
-        fontFamily: 'Solway-Medium',
+        fontFamily: 'Roboto-Light',
         paddingLeft: 35,
     }
 })

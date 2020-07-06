@@ -29,18 +29,18 @@ const styles = StyleSheet.create({
     date: {
         // fontWeight: 'bold',
         fontSize: 15,
-        fontFamily: 'Solway-Bold',
+        fontFamily: 'Roboto-Bold',
         alignSelf: 'center'
     },
     company: {
         paddingTop: 5,
         fontSize: 15,
-        fontFamily: 'Solway-Medium',
+        fontFamily: 'Roboto-Regular',
         flex: 1,
     },
     desc: {
         paddingTop: 5,
-        fontFamily: 'Solway-Light',
+        fontFamily: 'Roboto-Light',
         flex: 1,
         textAlign: 'justify',
     },

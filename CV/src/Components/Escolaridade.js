@@ -35,17 +35,17 @@ const styles = StyleSheet.create({
     periodo: {
         fontSize: 20,
         paddingBottom: 5,
-        fontFamily: 'Solway-Bold'
+        fontFamily: 'Roboto-Bold'
     },
     curso: {
         fontSize: 20,
         paddingLeft: 10,
-        fontFamily: 'Solway-Light',
+        fontFamily: 'Roboto-Light',
     },
     escola: {
         paddingLeft: 10,
         fontSize: 20,
-        fontFamily: 'Solway-Medium',
+        fontFamily: 'Roboto-Regular',
         textAlign: 'justify',
     }
 })

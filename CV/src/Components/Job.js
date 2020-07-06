@@ -33,13 +33,13 @@ const styles = StyleSheet.create({
         padding: 15,
     },
     name: {
-        fontFamily: 'Solway-Bold',
+        fontFamily: 'Roboto-Bold',
         fontSize: 20,
         flex: 3,
         alignSelf: 'center'
     },
     link: {
-        fontFamily: 'Solway-Light',
+        fontFamily: 'Roboto-Light',
         fontSize: 15,
         textAlign: 'justify'
     },

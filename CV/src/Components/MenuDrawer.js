@@ -64,12 +64,12 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 20,
         padding: 10,
-        fontFamily: 'Solway-Bold'
+        fontFamily: 'Roboto-Bold'
     },
     contato: {
         fontSize: 13,
         paddingLeft: 5,
-        fontFamily: 'Solway-Light'
+        fontFamily: 'Roboto-Light'
     },
     container: {
         padding: 10,

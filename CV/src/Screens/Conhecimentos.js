@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
         justifyContent: "center",
     },
     linguas: {
-        fontFamily: 'Solway-Light',
+        fontFamily: 'Roboto-Light',
         paddingTop: 7.5
     },
     shadow: {

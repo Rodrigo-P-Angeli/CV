@@ -39,6 +39,9 @@
 		FAEDA66E4D9C43049E3951F3 /* Solway-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = EC3826D3DCAE418ABCA5E944 /* Solway-Bold.otf */; };
 		F7F62A55038A47818D32A462 /* Solway-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 925623DA5EBD44F4B4F3D9F5 /* Solway-ExtraBold.otf */; };
 		53D86DA610364417A45AFDFB /* Solway-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = BD728A73CC7D4748851A7F2D /* Solway-Medium.otf */; };
+		5A9FC3144EDD4CA0892F3872 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7346CABBDEEF48F7B6F278D0 /* Roboto-Bold.ttf */; };
+		04C645C7A08040A9B9346D2F /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF2827EF47C24BA2A491E888 /* Roboto-Light.ttf */; };
+		037B965032A0463D8C409A15 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4D6BD2710724C459DB7A91F /* Roboto-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +100,9 @@
 		EC3826D3DCAE418ABCA5E944 /* Solway-Bold.otf */ = {isa = PBXFileReference; name = "Solway-Bold.otf"; path = "../src/assets/Fonts/Solway-Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		925623DA5EBD44F4B4F3D9F5 /* Solway-ExtraBold.otf */ = {isa = PBXFileReference; name = "Solway-ExtraBold.otf"; path = "../src/assets/Fonts/Solway-ExtraBold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		BD728A73CC7D4748851A7F2D /* Solway-Medium.otf */ = {isa = PBXFileReference; name = "Solway-Medium.otf"; path = "../src/assets/Fonts/Solway-Medium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7346CABBDEEF48F7B6F278D0 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; name = "Roboto-Bold.ttf"; path = "../src/assets/Fonts/Roboto-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AF2827EF47C24BA2A491E888 /* Roboto-Light.ttf */ = {isa = PBXFileReference; name = "Roboto-Light.ttf"; path = "../src/assets/Fonts/Roboto-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E4D6BD2710724C459DB7A91F /* Roboto-Regular.ttf */ = {isa = PBXFileReference; name = "Roboto-Regular.ttf"; path = "../src/assets/Fonts/Roboto-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +236,9 @@
 				EC3826D3DCAE418ABCA5E944 /* Solway-Bold.otf */,
 				925623DA5EBD44F4B4F3D9F5 /* Solway-ExtraBold.otf */,
 				BD728A73CC7D4748851A7F2D /* Solway-Medium.otf */,
+				7346CABBDEEF48F7B6F278D0 /* Roboto-Bold.ttf */,
+				AF2827EF47C24BA2A491E888 /* Roboto-Light.ttf */,
+				E4D6BD2710724C459DB7A91F /* Roboto-Regular.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -396,6 +405,9 @@
 				FAEDA66E4D9C43049E3951F3 /* Solway-Bold.otf in Resources */,
 				F7F62A55038A47818D32A462 /* Solway-ExtraBold.otf in Resources */,
 				53D86DA610364417A45AFDFB /* Solway-Medium.otf in Resources */,
+				5A9FC3144EDD4CA0892F3872 /* Roboto-Bold.ttf in Resources */,
+				04C645C7A08040A9B9346D2F /* Roboto-Light.ttf in Resources */,
+				037B965032A0463D8C409A15 /* Roboto-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

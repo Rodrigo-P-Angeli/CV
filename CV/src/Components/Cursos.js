@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
         resizeMode: 'contain',
     },
     curso: {
-        fontFamily: 'Solway-Light',
+        fontFamily: 'Roboto-Light',
         fontSize: 20,
     }
 })

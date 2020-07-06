@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     },
     content: {
         fontSize: 15,
-        fontFamily: 'Solway-Light',
+        fontFamily: 'Roboto-Light',
         textAlign: 'justify',
         flex: 1
     },
@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
         alignSelf: 'center',
     },
     textLink: {
-        fontFamily: 'Solway-Medium',
+        fontFamily: 'Roboto-Regular',
         color: 'blue',
         fontSize: 15,
     }
