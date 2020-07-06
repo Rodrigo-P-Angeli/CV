@@ -33,15 +33,10 @@ const styles = StyleSheet.create({
         padding: 15,
     },
     name: {
-        fontFamily: 'Roboto-Bold',
+        fontFamily: 'Roboto-Regular',
         fontSize: 20,
         flex: 3,
-        alignSelf: 'center'
-    },
-    link: {
-        fontFamily: 'Roboto-Light',
-        fontSize: 15,
-        textAlign: 'justify'
+        alignSelf: 'center',
     },
     icons: {
         flexDirection: 'row',
