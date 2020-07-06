@@ -121,7 +121,6 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     content: {
-        paddingRight: 10,
         fontSize: 15,
         fontFamily: 'Roboto-Light',
         textAlign: 'justify',
