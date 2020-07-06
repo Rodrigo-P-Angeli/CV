@@ -82,9 +82,9 @@ export default class Profile extends Component {
                                         <Text style={[styles.content, { paddingLeft: 10 }]}>{this.state.email}</Text>
                                     </View>
                                 </View>
-                                <View style={{ alignItems: 'flex-end', justifyContent: 'flex-end', alignSelf: 'flex-end', }}>
-                                    <TouchableOpacity style={{ alignSelf: 'center', padding: 5, backgroundColor: '#005131' }} onPress={() => this.onAddContact()}>
-                                        <Text style={{ alignSelf: 'center', fontFamily: 'Solway-Light', color: 'white' }}>{'Adicionar\nContato'}</Text>
+                                <View style={styles.viewButton}>
+                                    <TouchableOpacity style={styles.addContactTouch} onPress={() => this.onAddContact()}>
+                                        <Text style={styles.addContactText}>{'Adicionar\nContato'}</Text>
                                     </TouchableOpacity>
                                 </View>
                             </View>
@@ -147,6 +147,21 @@ const styles = StyleSheet.create({
         alignSelf: 'center',
         height: 220,
         width: 200,
-    }
+    },
+    viewButton: {
+        alignItems: 'flex-end',
+        justifyContent: 'flex-end',
+        alignSelf: 'flex-end',
+    },
+    addContactTouch: {
+        alignSelf: 'center',
+        padding: 5,
+        backgroundColor: '#005131'
+    },
+    addContactText: {
+        alignSelf: 'center',
+        fontFamily: 'Roboto-Light',
+        color: 'white'
+    },
 })
 
