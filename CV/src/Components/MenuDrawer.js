@@ -85,7 +85,4 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         paddingLeft: 10,
     },
-    drawerItems: {
-        fontFamily: 'shelter'
-    }
 })
